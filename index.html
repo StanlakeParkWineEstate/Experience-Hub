@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Stanlake Park</title>
+  <meta name="description" content="A premium digital guide to Stanlake Park Wine Estate, wine matching, visit planning, accommodation, local experiences and travel from London." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a href="#home" class="brand" aria-label="Explore Stanlake Park">
+        <span class="brand-symbol">SP</span>
+        <span>
+          <strong>Explore Stanlake Park</strong>
+          <small>Wine Estate Guide</small>
+        </span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false">Menu</button>
+      <nav class="nav">
+        <a href="#matcher">Find Wine</a>
+        <a href="#journeys">Plan</a>
+        <a href="#estate">Estate</a>
+        <a href="#stay">Stay</a>
+        <a href="#nearby">Nearby</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-media">
+          <div class="hero-overlay"></div>
+          <div class="hero-badge">
+            <span>🍷</span>
+            <p>Vineyard, winery, Wine Bar and stays in one estate</p>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <p class="eyebrow">A digital wine experience guide</p>
+          <h1>Plan your perfect Stanlake Park visit.</h1>
+          <p>Find your wine, choose your experience, explore the estate and turn a vineyard visit into a proper Berkshire day out.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#matcher">Find Your Wine</a>
+            <a class="button glass" href="#journeys">Build Your Visit</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-actions">
+        <a href="#matcher" class="action-card wine">
+          <span>🍷</span>
+          <strong>Find Your Wine</strong>
+          <small>Match familiar grapes to Stanlake bottles</small>
+        </a>
+        <a href="#journeys" class="action-card visit">
+          <span>🗺️</span>
+          <strong>Plan Your Visit</strong>
+          <small>Half day, full day or weekend ideas</small>
+        </a>
+        <a href="#estate" class="action-card estate">
+          <span>🏰</span>
+          <strong>Explore the Estate</strong>
+          <small>History, vineyard and winery stories</small>
+        </a>
+        <a href="#nearby" class="action-card nearby">
+          <span>📍</span>
+          <strong>Nearby Guide</strong>
+          <small>Food, towns, walks and rainy day ideas</small>
+        </a>
+      </section>
+
+      <section id="matcher" class="feature-section matcher-section">
+        <div class="section-intro">
+          <p class="eyebrow">Find Your Wine</p>
+          <h2>Start with what you already like.</h2>
+          <p>Most people know the wines they usually drink. Pick a few favourites and we’ll suggest Stanlake wines to try.</p>
+        </div>
+
+        <div class="matcher-app">
+          <div class="preference-panel">
+            <div class="panel-head">
+              <span class="step">01</span>
+              <div>
+                <h3>Choose your usual favourites</h3>
+                <p>No login. No personal profile. Just a quick guide.</p>
+              </div>
+            </div>
+            <div id="preference-options" class="choice-cloud"></div>
+            <div class="matcher-controls">
+              <button id="match-button" class="button primary" type="button">Reveal Matches</button>
+              <button id="reset-button" class="button plain" type="button">Clear</button>
+            </div>
+          </div>
+
+          <div class="results-panel">
+            <div class="panel-head">
+              <span class="step">02</span>
+              <div>
+                <h3>Your Stanlake shortlist</h3>
+                <p>Best matches appear first.</p>
+              </div>
+            </div>
+            <div id="results-empty" class="empty-card">
+              <span>✨</span>
+              <p>Select a few familiar grapes or styles to reveal your matches.</p>
+            </div>
+            <div id="results-list" class="wine-stack"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="journeys" class="feature-section dark-section">
+        <div class="section-intro light">
+          <p class="eyebrow">Build your visit</p>
+          <h2>Choose your kind of day out.</h2>
+          <p>Whether you’re coming from London, visiting locally or staying nearby, there’s an easy way to shape the day.</p>
+        </div>
+
+        <div class="journey-grid">
+          <article class="journey-card">
+            <div class="journey-image london"></div>
+            <div class="journey-copy">
+              <span>🚆 From London</span>
+              <h3>The easy vineyard escape</h3>
+              <p>Train to Twyford, short walk or taxi, wine tour, Wine Bar, then home.</p>
+              <ol>
+                <li>Elizabeth Line or National Rail</li>
+                <li>Wine Tour and tasting</li>
+                <li>Glass of fizz before heading back</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="journey-card">
+            <div class="journey-image couple"></div>
+            <div class="journey-copy">
+              <span>💕 For couples</span>
+              <h3>Tour, wine and a romantic stay</h3>
+              <p>Pair a tasting with North Lodge or a relaxed local dinner.</p>
+              <ol>
+                <li>Arrive at the estate</li>
+                <li>Explore the vineyard and winery</li>
+                <li>Stay overnight among the vines</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="journey-card">
+            <div class="journey-image group"></div>
+            <div class="journey-copy">
+              <span>🎉 For groups</span>
+              <h3>Make it a proper gathering</h3>
+              <p>Great for birthdays, friend groups, family stays and relaxed celebrations.</p>
+              <ol>
+                <li>Tour and tasting</li>
+                <li>Sharing boards in the Wine Bar</li>
+                <li>South Lodge or Old School House</li>
+              </ol>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-section experiences">
+        <div class="section-intro">
+          <p class="eyebrow">What can you do here?</p>
+          <h2>Experiences at Stanlake Park</h2>
+        </div>
+
+        <div class="experience-row">
+          <article>
+            <span>🍇</span>
+            <h3>Wine Tours</h3>
+            <p>Friendly vineyard and winery tours with guided tastings.</p>
+            <a href="https://stanlakepark.com" target="_blank" rel="noopener">Book a tour</a>
+          </article>
+          <article>
+            <span>🥂</span>
+            <h3>Wine Bar</h3>
+            <p>Wine by the glass, sharing boards, coffee, local beers and relaxed seating.</p>
+            <a href="https://stanlakepark.com" target="_blank" rel="noopener">Plan a visit</a>
+          </article>
+          <article>
+            <span>🎟️</span>
+            <h3>Events</h3>
+            <p>Seasonal tastings, collaborations and special evenings on the estate.</p>
+            <a href="https://stanlakepark.com" target="_blank" rel="noopener">See events</a>
+          </article>
+          <article>
+            <span>💍</span>
+            <h3>Weddings</h3>
+            <p>Historic barns, vineyard setting and a relaxed English wine estate backdrop.</p>
+            <a href="https://stanlakepark.com" target="_blank" rel="noopener">Explore weddings</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="estate" class="feature-section estate-section">
+        <div class="estate-card">
+          <div>
+            <p class="eyebrow">The estate</p>
+            <h2>One of England’s established vineyard stories.</h2>
+            <p>Vines were first planted here in 1979. Today, visitors can explore the vineyard, winery, Wine Bar and historic estate setting in one place.</p>
+          </div>
+          <div class="stat-grid">
+            <div><strong>1979</strong><span>First vines planted</span></div>
+            <div><strong>Twyford</strong><span>Elizabeth Line access</span></div>
+            <div><strong>On site</strong><span>Winery and Wine Bar</span></div>
+            <div><strong>10 acres</strong><span>Approx vineyard area</span></div>
+          </div>
+        </div>
+
+        <div class="story-strip">
+          <article>
+            <span>01</span>
+            <h3>Historic setting</h3>
+            <p>Characterful estate buildings, old garden spaces and a countryside feel close to town.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Working winery</h3>
+            <p>Visitors can learn how English wine is made, not just taste the finished bottle.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Wine tourism</h3>
+            <p>Turn a tasting into lunch, a stay, a wedding visit or a full day out nearby.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="stay" class="feature-section stay-section">
+        <div class="section-intro">
+          <p class="eyebrow">Stay with us</p>
+          <h2>Make it more than a visit.</h2>
+        </div>
+
+        <div class="stay-showcase">
+          <article class="stay-card north">
+            <div>
+              <span>Sleeps 2</span>
+              <h3>North Lodge</h3>
+              <p>A romantic gatehouse stay for couples.</p>
+            </div>
+          </article>
+          <article class="stay-card south">
+            <div>
+              <span>Sleeps 8</span>
+              <h3>South Lodge</h3>
+              <p>Space for friends, families and group getaways.</p>
+            </div>
+          </article>
+          <article class="stay-card school">
+            <div>
+              <span>Sleeps up to 9</span>
+              <h3>Old School House</h3>
+              <p>A characterful Henley base for longer stays.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="nearby" class="feature-section nearby-section">
+        <div class="section-intro">
+          <p class="eyebrow">Around Stanlake Park</p>
+          <h2>Turn the visit into a day out.</h2>
+          <p>Use these ideas before booking, after booking or while you’re already here.</p>
+        </div>
+
+        <div class="nearby-board">
+          <button class="nearby-tile active" data-panel="food">
+            <span>🍺</span>
+            <strong>Food & drink</strong>
+            <small>Craft beer, coffee, pubs and Wine Bar stops</small>
+          </button>
+          <button class="nearby-tile" data-panel="walks">
+            <span>🚶</span>
+            <strong>Walks</strong>
+            <small>Riverside routes and countryside strolls</small>
+          </button>
+          <button class="nearby-tile" data-panel="towns">
+            <span>🏘️</span>
+            <strong>Towns</strong>
+            <small>Twyford, Reading, Henley and Marlow</small>
+          </button>
+          <button class="nearby-tile" data-panel="rain">
+            <span>🌧️</span>
+            <strong>Rainy day</strong>
+            <small>Indoor backups and cosy options</small>
+          </button>
+        </div>
+
+        <div class="nearby-detail">
+          <div class="nearby-panel active" id="food">
+            <h3>Food and drink lovers</h3>
+            <p>Pair the Wine Bar with local breweries, independent coffee, good pubs and Thames Valley restaurants.</p>
+          </div>
+          <div class="nearby-panel" id="walks">
+            <h3>Walks and fresh air</h3>
+            <p>Build in a gentle local walk before or after your tasting, especially if you’re making a full day of it.</p>
+          </div>
+          <div class="nearby-panel" id="towns">
+            <h3>Nearby towns</h3>
+            <p>Explore Twyford for convenience, Reading for shopping and culture, Henley for the river, and Marlow or Windsor for a bigger day out.</p>
+          </div>
+          <div class="nearby-panel" id="rain">
+            <h3>Rainy day ideas</h3>
+            <p>Use indoor tastings, the Wine Bar, Reading shopping, escape rooms, museums and cosy pubs as your backup plan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <p class="eyebrow">Ready to start?</p>
+        <h2>Find your wine first.</h2>
+        <a class="button primary" href="#matcher">Open the Wine Matcher</a>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
