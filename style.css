@@ -565,15 +565,15 @@ h3 {
 }
 
 .journey-image.london {
-  background: url("https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: url("http://stanlakepark.com/wp-content/uploads/wine-tour-small-2.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .journey-image.couple {
-  background: url("https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: url("http://stanlakepark.com/wp-content/uploads/Stanlake-Park-Winery-1-Bed-0001-7-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .journey-image.group {
-  background: url("https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: url("http://stanlakepark.com/wp-content/uploads/2-42.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .journey-copy {
@@ -640,7 +640,7 @@ h3 {
   color: white;
   background:
     linear-gradient(135deg, rgba(32,25,22,0.88), rgba(63,93,55,0.74)),
-    url("https://images.unsplash.com/photo-1594495894542-a46cc73e081a?auto=format&fit=crop&w=1500&q=85") center/cover;
+    url("http://stanlakepark.com/wp-content/uploads/Organic-Wine-vs-Vegan-Wine.jpg?auto=format&fit=crop&w=1500&q=85") center/cover;
   box-shadow: var(--shadow);
 }
 
@@ -736,15 +736,15 @@ h3 {
 }
 
 .stay-card.north {
-  background: url("https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=85") center/cover;
+  background: url("http://stanlakepark.com/wp-content/uploads/Stanlake-Park-Winery-1-Bed-0001-7-scaled.jpg?auto=format&fit=crop&w=1200&q=85") center/cover;
 }
 
 .stay-card.south {
-  background: url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: url("http://stanlakepark.com/wp-content/uploads/South-Lodge-0001-245-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .stay-card.school {
-  background: url("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: url("http://stanlakepark.com/wp-content/uploads/The-Old-School-House-Front-View-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .nearby-board {
@@ -821,7 +821,7 @@ h3 {
   color: white;
   background:
     linear-gradient(135deg, rgba(51,16,31,0.92), rgba(116,34,69,0.76)),
-    url("https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&w=1500&q=85") center/cover;
+    url("http://stanlakepark.com/wp-content/uploads/Autumn-vineyard-at-Stanlake-Park-Wine-Estate-Berkshire.jpg?auto=format&fit=crop&w=1500&q=85") center/cover;
   box-shadow: var(--shadow);
 }
 
