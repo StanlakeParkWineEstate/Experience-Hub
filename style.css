@@ -330,19 +330,19 @@ h3 {
 }
 
 .action-card.wine {
-  background: linear-gradient(rgba(116,34,69,0.15), rgba(116,34,69,0.40)), url("https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: linear-gradient(rgba(116,34,69,0.15), rgba(116,34,69,0.40)), url("http://stanlakepark.com/wp-content/uploads/Wine-Bar-ladies-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .action-card.visit {
-  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("http://stanlakepark.com/wp-content/uploads/Stanlake-Park-280325-114-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .action-card.estate {
-  background: linear-gradient(rgba(33,25,22,0.10), rgba(33,25,22,0.48)), url("https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: linear-gradient(rgba(33,25,22,0.10), rgba(33,25,22,0.48)), url("http://stanlakepark.com/wp-content/uploads/stanlake-park-winery-7-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .action-card.nearby {
-  background: linear-gradient(rgba(51,16,31,0.10), rgba(51,16,31,0.46)), url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: linear-gradient(rgba(51,16,31,0.10), rgba(51,16,31,0.46)), url("http://stanlakepark.com/wp-content/uploads/berkshire-thames-walks-drone-view.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .feature-section {
