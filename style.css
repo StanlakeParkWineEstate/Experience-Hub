@@ -541,7 +541,7 @@ h3 {
 .dark-section {
   color: white;
   background:
-    linear-gradient(135deg, rgba(111,167,123,0.96), rgba(73,20,43,0.90)),
+    linear-gradient(135deg, rgba(111,167,123,0.96), rgba(62,111,75,0.90)),
     url("http://stanlakepark.com/wp-content/uploads/stanlake-park-winery-1-scaled.jpg?auto=format&fit=crop&w=1600&q=85") center/cover;
   box-shadow: var(--shadow);
 }
