@@ -770,7 +770,7 @@ h3 {
 .nearby-tile.active {
   color: white;
   background:
-    linear-gradient(135deg, rgba(116,34,69,0.92), rgba(51,16,31,0.90));
+    linear-gradient(135deg, rgba(111,167,123,0.92), rgba(62,111,75,0.90));
 }
 
 .nearby-tile span {
@@ -823,7 +823,7 @@ h3 {
   text-align: center;
   color: white;
   background:
-    linear-gradient(135deg, rgba(51,16,31,0.92), rgba(116,34,69,0.76)),
+    linear-gradient(135deg, rgba(62,111,75,0.92), rgba(111,167,123,0.76)),
     url("http://stanlakepark.com/wp-content/uploads/Autumn-vineyard-at-Stanlake-Park-Wine-Estate-Berkshire.jpg?auto=format&fit=crop&w=1500&q=85") center/cover;
   box-shadow: var(--shadow);
 }
