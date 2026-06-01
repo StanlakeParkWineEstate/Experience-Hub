@@ -146,7 +146,7 @@ a {
   border-radius: 44px;
   background:
     linear-gradient(180deg, rgba(51,16,31,0.05), rgba(51,16,31,0.70)),
-    url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1600&q=85") center/cover;
+    url("http://stanlakepark.com/wp-content/uploads/stanlake-park-pinot-window-light-scaled.jpg?auto=format&fit=crop&w=1600&q=85") center/cover;
   box-shadow: var(--shadow);
 }
 
