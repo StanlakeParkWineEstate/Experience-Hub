@@ -103,8 +103,7 @@ a {
   border-radius: 18px;
   color: white;
   background:
-    radial-gradient(circle at 35% 25%, rgba(255,255,255,0.36), transparent 30%),
-    linear-gradient(135deg, var(--wine), var(--wine-dark));
+rgba(199,160,90,0.08)
   font-family: Georgia, serif;
   letter-spacing: 0.08em;
   box-shadow: 0 16px 32px rgba(116, 34, 69, 0.24);
