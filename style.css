@@ -1390,3 +1390,28 @@ color:white;
   font-size: 0.82rem;
   font-weight: 700;
 }
+.explorer-grid,
+.explorer-card,
+.explorer-card a {
+  position: relative;
+  z-index: 5;
+}
+
+.explorer-card a {
+  pointer-events: auto;
+}
+
+.nearby-detail,
+.nearby-panel {
+  display: none !important;
+}
+.explorer-card a {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  background: #2f6f44;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+}
