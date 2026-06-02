@@ -1107,29 +1107,20 @@ h3 {
 }
 
 .highlight-card {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 22px;
-  padding: 22px;
-}
-
-.highlight-card span {
-  display: block;
-  font-size: 1.8rem;
-  margin-bottom: 12px;
-}
-
-.highlight-card h3 {
-  margin: 0 0 8px;
-  color: white;
-  font-size: 1.15rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 18px 20px;
+  min-height: auto;
 }
 
 .highlight-card p {
+  display: none;
+}
+
+.highlight-card h3 {
   margin: 0;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.5;
+  font-size: 1rem;
 }
 
 @media (max-width: 900px) {
