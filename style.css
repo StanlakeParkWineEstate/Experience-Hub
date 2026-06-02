@@ -1077,3 +1077,24 @@ h3 {
 .experience-row article ul {
   margin-top: auto;
 }
+.tour-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.tour-divider::before,
+.tour-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(32,25,22,0.08);
+}
+
+.tour-divider span {
+  padding: 0 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
