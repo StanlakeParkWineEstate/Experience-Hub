@@ -1216,3 +1216,20 @@ h3 {
 .estate-button:hover {
   opacity: 0.9;
 }
+.estate-history-strip {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 24px;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+}
+
+.estate-history-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
