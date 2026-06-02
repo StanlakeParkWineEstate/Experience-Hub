@@ -871,4 +871,3 @@ renderExplorer();
 
 });
 
-});
