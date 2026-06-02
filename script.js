@@ -324,69 +324,463 @@ resetButton.addEventListener("click", () => {
 renderOptions();
 renderResults();
 const explorerItems = [
-{
-  name: "Deadlocked Escape Rooms",
-  category: "experiences",
-  distance: "5.4 miles",
-  description: "Award winning escape rooms in Reading.",
-  link: "https://deadlockedrooms.com"
-},
+  {
+    name: "Siren Craft Brew",
+    category: "beer",
+    distance: "5 miles",
+    drive: "12 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Award winning local brewery with a taproom and fresh craft beer.",
+    link: "https://www.sirencraftbrew.com"
+  },
+  {
+    name: "Double-Barrelled Brewery",
+    category: "beer",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: true,
+    description: "Independent Reading brewery with taproom, events and rotating beers.",
+    link: "https://doublebarrelled.co.uk"
+  },
+  {
+    name: "Elusive Brewing",
+    category: "beer",
+    distance: "5 miles",
+    drive: "12 mins",
+    setting: "Indoor",
+    dog: true,
+    description: "Small batch brewery known for hop forward and modern craft beers.",
+    link: "https://www.elusivebrewing.com"
+  },
+  {
+    name: "Phantom Brewing Co",
+    category: "beer",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: true,
+    description: "Reading craft brewery and taproom with bold modern beers.",
+    link: "https://www.phantombrew.com"
+  },
+  {
+    name: "Indie Rabble Brewing Co",
+    category: "beer",
+    distance: "9 miles",
+    drive: "20 mins",
+    setting: "Indoor",
+    dog: true,
+    description: "Windsor based brewery with taproom and independent beer releases.",
+    link: "https://indierabble.co.uk"
+  },
 
-{
-  name: "Siren Craft Brew",
-  category: "beer",
-  distance: "4.8 miles",
-  description: "Independent Berkshire brewery and taproom.",
-  link: "https://www.sirencraftbrew.com"
-},
+  {
+    name: "Coppa Club Sonning",
+    category: "food",
+    distance: "3 miles",
+    drive: "8 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Relaxed riverside dining in pretty Sonning.",
+    link: "https://www.coppaclub.co.uk/sonning"
+  },
+  {
+    name: "The French Horn",
+    category: "food",
+    distance: "3 miles",
+    drive: "8 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Classic riverside restaurant and hotel in Sonning.",
+    link: "https://thefrenchhorn.co.uk"
+  },
+  {
+    name: "The Bull Inn, Sonning",
+    category: "food",
+    distance: "3 miles",
+    drive: "8 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Historic village pub with food and rooms.",
+    link: "https://www.bullinnsonning.co.uk"
+  },
+  {
+    name: "The Baskerville",
+    category: "food",
+    distance: "7 miles",
+    drive: "15 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Village pub near Henley with food, garden and rooms.",
+    link: "https://www.thebaskerville.com"
+  },
+  {
+    name: "The Crooked Billet",
+    category: "food",
+    distance: "12 miles",
+    drive: "25 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Characterful pub restaurant near Henley, loved for food.",
+    link: "https://www.thecrookedbillet.co.uk"
+  },
+  {
+    name: "London Street Brasserie",
+    category: "food",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor & Outdoor",
+    dog: false,
+    description: "Smart riverside restaurant in central Reading.",
+    link: "https://londonstbrasserie.co.uk"
+  },
+  {
+    name: "Bluegrass BBQ Reading",
+    category: "food",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "American style barbecue and comfort food in Reading.",
+    link: "https://bluegrass-bbq.com"
+  },
+  {
+    name: "The Corn Stores",
+    category: "food",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Steak, cocktails and smart dining close to Reading station.",
+    link: "https://thecornstoresreading.co.uk"
+  },
+  {
+    name: "The Boathouse, Henley",
+    category: "food",
+    distance: "8 miles",
+    drive: "18 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Riverside food and drinks in Henley on Thames.",
+    link: "https://www.boathousehenley.com"
+  },
+  {
+    name: "The Bell at Waltham St Lawrence",
+    category: "food",
+    distance: "5 miles",
+    drive: "12 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Country pub in a pretty village close to Twyford.",
+    link: "https://www.thebellwsl.com"
+  },
 
-{
-  name: "Double-Barrelled Brewery",
-  category: "beer",
-  distance: "6.2 miles",
-  description: "Modern brewery near Reading station.",
-  link: "https://doublebarrelled.co.uk"
-},
+  {
+    name: "Anonymous Coffee",
+    category: "coffee",
+    distance: "0 miles",
+    drive: "On site",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Local coffee served at Stanlake Park Wine Bar.",
+    link: "https://stanlakepark.com"
+  },
+  {
+    name: "Picnic Foods",
+    category: "coffee",
+    distance: "1 mile",
+    drive: "4 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Independent café and food spot in Twyford.",
+    link: "https://www.picnicfoods.co.uk"
+  },
+  {
+    name: "Workhouse Coffee",
+    category: "coffee",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Speciality coffee roaster and café in Reading.",
+    link: "https://workhousecoffee.com"
+  },
+  {
+    name: "Geo Café, Henley",
+    category: "coffee",
+    distance: "8 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Independent café close to the river in Henley.",
+    link: "https://www.geocafe.co.uk"
+  },
+  {
+    name: "Coppa Club Sonning Café",
+    category: "coffee",
+    distance: "3 miles",
+    drive: "8 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "A relaxed coffee stop by the Thames.",
+    link: "https://www.coppaclub.co.uk/sonning"
+  },
 
-{
-  name: "Anonymous Coffee",
-  category: "food",
-  distance: "0.5 miles",
-  description: "Speciality coffee roasters.",
-  link: "https://anonymouscoffee.co.uk"
-},
+  {
+    name: "Twyford Village Walk",
+    category: "walks",
+    distance: "1 mile",
+    drive: "4 mins",
+    setting: "Outdoor",
+    dog: true,
+    description: "An easy local walk before or after your vineyard visit.",
+    link: "https://stanlakepark.com"
+  },
+  {
+    name: "Sonning Thames Walk",
+    category: "walks",
+    distance: "3 miles",
+    drive: "8 mins",
+    setting: "Outdoor",
+    dog: true,
+    description: "Pretty riverside walk around Sonning and the Thames.",
+    link: "https://www.visitthames.co.uk"
+  },
+  {
+    name: "Dinton Pastures",
+    category: "walks",
+    distance: "4 miles",
+    drive: "10 mins",
+    setting: "Outdoor",
+    dog: true,
+    description: "Lakeside country park with walks, nature and watersports.",
+    link: "https://www.wokinghamcountryside.co.uk/dinton-pastures-country-park"
+  },
+  {
+    name: "Henley Riverside Walk",
+    category: "walks",
+    distance: "8 miles",
+    drive: "18 mins",
+    setting: "Outdoor",
+    dog: true,
+    description: "Classic Thames walk from one of the area's prettiest towns.",
+    link: "https://visit-henley.com"
+  },
+  {
+    name: "Basildon Park Walks",
+    category: "walks",
+    distance: "14 miles",
+    drive: "28 mins",
+    setting: "Outdoor",
+    dog: true,
+    description: "National Trust estate with parkland walks and countryside views.",
+    link: "https://www.nationaltrust.org.uk/visit/oxfordshire-buckinghamshire-berkshire/basildon-park"
+  },
 
-{
-  name: "Henley-on-Thames",
-  category: "towns",
-  distance: "8.5 miles",
-  description: "Historic riverside town.",
-  link: "https://visit-henley.com"
-},
+  {
+    name: "Twyford",
+    category: "towns",
+    distance: "1 mile",
+    drive: "4 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Your closest village, with rail links, pubs, cafés and local shops.",
+    link: "https://stanlakepark.com"
+  },
+  {
+    name: "Reading",
+    category: "towns",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor & Outdoor",
+    dog: false,
+    description: "Shopping, restaurants, breweries, nightlife, theatre and riverside walks.",
+    link: "https://www.visit-reading.com"
+  },
+  {
+    name: "Henley on Thames",
+    category: "towns",
+    distance: "8 miles",
+    drive: "18 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Beautiful riverside town with shops, pubs and Thames walks.",
+    link: "https://visit-henley.com"
+  },
+  {
+    name: "Marlow",
+    category: "towns",
+    distance: "13 miles",
+    drive: "28 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Smart riverside town with restaurants, walks and independent shops.",
+    link: "https://www.visitmarlow.com"
+  },
+  {
+    name: "Windsor",
+    category: "towns",
+    distance: "18 miles",
+    drive: "35 mins",
+    setting: "Indoor & Outdoor",
+    dog: true,
+    description: "Historic town, castle, riverfront and plenty for a full day out.",
+    link: "https://www.windsor.gov.uk"
+  },
 
-{
-  name: "Dinton Pastures",
-  category: "walks",
-  distance: "4 miles",
-  description: "Lakeside walking routes.",
-  link: "https://www.dinton-pastures.co.uk"
-},
+  {
+    name: "Beale Wildlife Park",
+    category: "family",
+    distance: "17 miles",
+    drive: "30 mins",
+    setting: "Outdoor",
+    dog: false,
+    description: "Wildlife park, gardens, play areas and family attractions.",
+    link: "https://bealepark.org.uk"
+  },
+  {
+    name: "Wellington Country Park",
+    category: "family",
+    distance: "9 miles",
+    drive: "18 mins",
+    setting: "Outdoor",
+    dog: true,
+    description: "Big family day out with play areas, trails and outdoor activities.",
+    link: "https://wellingtoncountrypark.co.uk"
+  },
+  {
+    name: "Legoland Windsor",
+    category: "family",
+    distance: "17 miles",
+    drive: "35 mins",
+    setting: "Outdoor",
+    dog: false,
+    description: "Major theme park for families, rides and Lego themed attractions.",
+    link: "https://www.legoland.co.uk"
+  },
+  {
+    name: "Odds Farm Park",
+    category: "family",
+    distance: "15 miles",
+    drive: "30 mins",
+    setting: "Indoor & Outdoor",
+    dog: false,
+    description: "Farm park with animals, play areas and family activities.",
+    link: "https://www.oddsfarm.co.uk"
+  },
+  {
+    name: "The Look Out Discovery Centre",
+    category: "family",
+    distance: "14 miles",
+    drive: "28 mins",
+    setting: "Indoor & Outdoor",
+    dog: false,
+    description: "Hands on science centre and forest adventure near Bracknell.",
+    link: "https://www.bracknell-forest.gov.uk/leisure-services/look-out-discovery-centre"
+  },
 
-{
-  name: "Beale Park",
-  category: "family",
-  distance: "12 miles",
-  description: "Wildlife and family attraction.",
-  link: "https://www.bealepark.org.uk"
-},
-
-{
-  name: "Wellington Country Park",
-  category: "family",
-  distance: "14 miles",
-  description: "Huge outdoor family attraction.",
-  link: "https://wellington-country-park.co.uk"
-}
+  {
+    name: "Deadlocked Escape Rooms",
+    category: "experiences",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Award winning escape rooms in Reading.",
+    link: "https://deadlockedrooms.com"
+  },
+  {
+    name: "Clays Reading",
+    category: "experiences",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Competitive clay target style gaming, cocktails and food.",
+    link: "https://clays.bar/reading"
+  },
+  {
+    name: "Reading FC",
+    category: "experiences",
+    distance: "9 miles",
+    drive: "20 mins",
+    setting: "Outdoor",
+    dog: false,
+    description: "Football at the Select Car Leasing Stadium.",
+    link: "https://www.readingfc.co.uk"
+  },
+  {
+    name: "The Hexagon",
+    category: "experiences",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Reading theatre, comedy, music and live entertainment venue.",
+    link: "https://whatsonreading.com/venues/hexagon"
+  },
+  {
+    name: "Reading Biscuit Factory",
+    category: "experiences",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Independent cinema, food, drinks and events in Reading.",
+    link: "https://readingbiscuitfactory.co.uk"
+  },
+  {
+    name: "Thames Rivercruise",
+    category: "experiences",
+    distance: "7 miles",
+    drive: "18 mins",
+    setting: "Outdoor",
+    dog: false,
+    description: "River cruises from Reading and Caversham.",
+    link: "https://www.thamesrivercruise.co.uk"
+  },
+  {
+    name: "Go Ape Bracknell",
+    category: "experiences",
+    distance: "14 miles",
+    drive: "28 mins",
+    setting: "Outdoor",
+    dog: false,
+    description: "Treetop adventure and high ropes in Swinley Forest.",
+    link: "https://goape.co.uk/locations/bracknell"
+  },
+  {
+    name: "Nirvana Spa",
+    category: "experiences",
+    distance: "4 miles",
+    drive: "10 mins",
+    setting: "Indoor",
+    dog: false,
+    description: "Spa day experience close to the estate.",
+    link: "https://nirvanaspa.co.uk"
+  },
+  {
+    name: "Henley Royal Regatta",
+    category: "experiences",
+    distance: "8 miles",
+    drive: "18 mins",
+    setting: "Outdoor",
+    dog: false,
+    description: "World famous rowing event on the Thames.",
+    link: "https://www.hrr.co.uk"
+  },
+  {
+    name: "Henley Festival",
+    category: "experiences",
+    distance: "8 miles",
+    drive: "18 mins",
+    setting: "Outdoor",
+    dog: false,
+    description: "Summer music, food, comedy and culture festival by the river.",
+    link: "https://henley-festival.co.uk"
+  }
+];
 ];
 const explorerGrid =
 document.getElementById("explorerGrid");
@@ -397,53 +791,56 @@ document.getElementById("explorerSearch");
 let currentCategory = "all";
 
 function renderExplorer() {
+  const search = searchInput.value.toLowerCase();
 
-const search =
-searchInput.value.toLowerCase();
+  explorerGrid.innerHTML = "";
 
-explorerGrid.innerHTML = "";
+  explorerItems
+    .filter(item => {
+      const categoryMatch =
+        currentCategory === "all" ||
+        item.category === currentCategory;
 
-explorerItems
-.filter(item => {
+      const searchMatch =
+        item.name.toLowerCase().includes(search) ||
+        item.description.toLowerCase().includes(search) ||
+        item.category.toLowerCase().includes(search);
 
-const categoryMatch =
-currentCategory === "all" ||
-item.category === currentCategory;
+      return categoryMatch && searchMatch;
+    })
+    .forEach(item => {
+      const card = document.createElement("div");
 
-const searchMatch =
-item.name.toLowerCase().includes(search);
+      card.className = "explorer-card";
 
-return categoryMatch && searchMatch;
+      card.innerHTML = `
+        <div class="explorer-card-top">
+          <span class="explorer-category">${item.category}</span>
+          <span class="explorer-distance">${item.distance}</span>
+        </div>
 
-})
-.forEach(item => {
+        <h3>${item.name}</h3>
 
-const card = document.createElement("div");
+        <p>${item.description}</p>
 
-card.className = "explorer-card";
+        <div class="explorer-meta">
+          <span>📍 ${item.distance}</span>
+          <span>🚗 ${item.drive}</span>
+          <span>${item.setting === "Indoor" ? "🏠" : item.setting === "Outdoor" ? "🌿" : "🌦️"} ${item.setting}</span>
+          ${item.dog ? "<span>🐶 Dog friendly</span>" : ""}
+        </div>
 
-card.innerHTML = `
-<h3>${item.name}</h3>
+        <a
+          href="${item.link}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn more →
+        </a>
+      `;
 
-<p class="distance">
-📍 ${item.distance}
-</p>
-
-<p>
-${item.description}
-</p>
-
-<a
-href="${item.link}"
-target="_blank"
->
-Learn more →
-</a>
-`;
-
-explorerGrid.appendChild(card);
-
-});
+      explorerGrid.appendChild(card);
+    });
 }
 
 renderExplorer();
