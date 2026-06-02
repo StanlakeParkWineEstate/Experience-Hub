@@ -1011,8 +1011,9 @@ h3 {
 .tour-tips {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
+  width: 100%;
 }
 
 .tip-card {
@@ -1042,7 +1043,7 @@ h3 {
 
 @media (max-width: 1050px) {
   .tour-tips {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
