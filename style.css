@@ -749,7 +749,35 @@ h3 {
 .stay-card.school {
   background: url("http://stanlakepark.com/wp-content/uploads/The-Old-School-House-Front-View-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
+.stay-intro {
+  max-width: 780px;
+  margin: 24px 0 48px;
+}
 
+.stay-intro p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #5c5c5c;
+  margin-bottom: 24px;
+}
+
+.stay-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2f6f44;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.stay-button:hover {
+  transform: translateY(-2px);
+  background: #255938;
+}
 .nearby-board {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
