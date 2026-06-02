@@ -1344,3 +1344,49 @@ cursor:pointer;
 background:#2d6b43;
 color:white;
 }
+.explorer-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.explorer-category,
+.explorer-distance {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.explorer-category {
+  text-transform: capitalize;
+  background: rgba(47,111,68,0.10);
+  color: #2f6f44;
+}
+
+.explorer-distance {
+  background: #f4f0e8;
+  color: #4f463e;
+}
+
+.explorer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.explorer-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #f7f3ec;
+  color: #5d5249;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
