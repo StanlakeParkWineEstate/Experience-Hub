@@ -140,52 +140,51 @@ function renderResults() {
     return;
   }
 
+  const slugMap = {
+    "Bacchus": "bacchus",
+    "Madeleine": "madeleine",
+    "Kings Fumé": "kings-fume",
+    "Pinot Noir Rosé": "pinot-noir-rose",
+    "Rosé Superior": "rose-superior",
+    "Reserve": "reserve",
+    "Cricket Grove": "cricket-grove",
+    "Heritage Brut": "heritage-brut",
+    "Hinton Brut": "hinton-brut",
+    "Bacchus Brut": "bacchus-brut",
+    "Orange": "orange"
+  };
+
   emptyEl.style.display = "none";
-  resultsEl.innerHTML = matches.slice(0, 4).map((wine, index) => `
-    <article class="result-card">
-      <div>
-        <p class="card-label">Match ${index + 1}</p>
-        <h3>${wine.name}</h3>
-        <p><strong>${wine.style}</strong></p>
-        <p>${wine.notes}</p>
-        <p>${wine.why}</p>
-        <ul class="match-reasons">
-          ${wine.matchingPrefs.map(pref => `<li>You like ${pref}</li>`).join("")}
-        </ul>
-      </div>
-      <span class="score">${wine.score}% match</span>
-    </article>
-  `).join("");
+
+  resultsEl.innerHTML = matches.slice(0, 4).map((wine, index) => {
+    const slug = slugMap[wine.name];
+    const wineUrl = `https://www.stanlakepark.com/product/${slug}/?utm_source=experience_hub&utm_medium=wine_matcher&utm_campaign=find_your_wine`;
+
+    return `
+      <article class="result-card">
+        <div>
+          <p class="card-label">Match ${index + 1}</p>
+          <h3>${wine.name}</h3>
+          <p><strong>${wine.style}</strong></p>
+          <p>${wine.notes}</p>
+          <p>${wine.why}</p>
+
+          <ul class="match-reasons">
+            ${wine.matchingPrefs.map(pref => `<li>You like ${pref}</li>`).join("")}
+          </ul>
+
+          <a
+            href="${wineUrl}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wine-link"
+          >
+            View ${wine.name} →
+          </a>
+        </div>
+
+        <span class="score">${wine.score}% match</span>
+      </article>
+    `;
+  }).join("");
 }
-
-document.querySelector(".menu-button").addEventListener("click", () => {
-  const nav = document.querySelector(".nav");
-  const button = document.querySelector(".menu-button");
-  const isOpen = nav.classList.toggle("open");
-  button.setAttribute("aria-expanded", String(isOpen));
-});
-
-document.querySelectorAll(".nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.querySelector(".nav").classList.remove("open");
-    document.querySelector(".menu-button").setAttribute("aria-expanded", "false");
-  });
-});
-
-document.querySelectorAll(".nearby-tile").forEach(tile => {
-  tile.addEventListener("click", () => {
-    document.querySelectorAll(".nearby-tile").forEach(item => item.classList.remove("active"));
-    document.querySelectorAll(".nearby-panel").forEach(panel => panel.classList.remove("active"));
-    tile.classList.add("active");
-    document.getElementById(tile.dataset.panel).classList.add("active");
-  });
-});
-
-matchButton.addEventListener("click", renderResults);
-resetButton.addEventListener("click", () => {
-  optionsEl.querySelectorAll("input").forEach(input => input.checked = false);
-  renderResults();
-});
-
-renderOptions();
-renderResults();
