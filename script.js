@@ -305,15 +305,6 @@ document.querySelectorAll(".nav a").forEach(link => {
   });
 });
 
-document.querySelectorAll(".nearby-tile").forEach(tile => {
-  tile.addEventListener("click", () => {
-    document.querySelectorAll(".nearby-tile").forEach(item => item.classList.remove("active"));
-    document.querySelectorAll(".nearby-panel").forEach(panel => panel.classList.remove("active"));
-    tile.classList.add("active");
-    document.getElementById(tile.dataset.panel).classList.add("active");
-  });
-});
-
 matchButton.addEventListener("click", renderResults);
 
 resetButton.addEventListener("click", () => {
@@ -780,7 +771,6 @@ const explorerItems = [
     description: "Summer music, food, comedy and culture festival by the river.",
     link: "https://henley-festival.co.uk"
   }
-];
 ];
 const explorerGrid =
 document.getElementById("explorerGrid");
