@@ -1415,3 +1415,13 @@ color:white;
   text-decoration: none;
   font-weight: 800;
 }
+.explorer-grid,
+.explorer-card,
+.explorer-card a {
+  position: relative;
+  z-index: 999;
+}
+
+.explorer-card a {
+  pointer-events: auto;
+}
