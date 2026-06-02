@@ -188,3 +188,35 @@ function renderResults() {
     `;
   }).join("");
 }
+document.querySelector(".menu-button").addEventListener("click", () => {
+  const nav = document.querySelector(".nav");
+  const button = document.querySelector(".menu-button");
+  const isOpen = nav.classList.toggle("open");
+  button.setAttribute("aria-expanded", String(isOpen));
+});
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelector(".nav").classList.remove("open");
+    document.querySelector(".menu-button").setAttribute("aria-expanded", "false");
+  });
+});
+
+document.querySelectorAll(".nearby-tile").forEach(tile => {
+  tile.addEventListener("click", () => {
+    document.querySelectorAll(".nearby-tile").forEach(item => item.classList.remove("active"));
+    document.querySelectorAll(".nearby-panel").forEach(panel => panel.classList.remove("active"));
+    tile.classList.add("active");
+    document.getElementById(tile.dataset.panel).classList.add("active");
+  });
+});
+
+matchButton.addEventListener("click", renderResults);
+
+resetButton.addEventListener("click", () => {
+  optionsEl.querySelectorAll("input").forEach(input => input.checked = false);
+  renderResults();
+});
+
+renderOptions();
+renderResults();
