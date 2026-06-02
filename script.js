@@ -388,3 +388,90 @@ const explorerItems = [
   link: "https://wellington-country-park.co.uk"
 }
 ];
+const explorerGrid =
+document.getElementById("explorerGrid");
+
+const searchInput =
+document.getElementById("explorerSearch");
+
+let currentCategory = "all";
+
+function renderExplorer() {
+
+const search =
+searchInput.value.toLowerCase();
+
+explorerGrid.innerHTML = "";
+
+explorerItems
+.filter(item => {
+
+const categoryMatch =
+currentCategory === "all" ||
+item.category === currentCategory;
+
+const searchMatch =
+item.name.toLowerCase().includes(search);
+
+return categoryMatch && searchMatch;
+
+})
+.forEach(item => {
+
+const card = document.createElement("div");
+
+card.className = "explorer-card";
+
+card.innerHTML = `
+<h3>${item.name}</h3>
+
+<p class="distance">
+📍 ${item.distance}
+</p>
+
+<p>
+${item.description}
+</p>
+
+<a
+href="${item.link}"
+target="_blank"
+>
+Learn more →
+</a>
+`;
+
+explorerGrid.appendChild(card);
+
+});
+}
+
+renderExplorer();
+
+searchInput.addEventListener(
+"input",
+renderExplorer
+);
+
+document
+.querySelectorAll(".explorer-tab")
+.forEach(tab => {
+
+tab.addEventListener("click", () => {
+
+document
+.querySelectorAll(".explorer-tab")
+.forEach(t =>
+t.classList.remove("active")
+);
+
+tab.classList.add("active");
+
+currentCategory =
+tab.dataset.category;
+
+renderExplorer();
+
+});
+
+});
