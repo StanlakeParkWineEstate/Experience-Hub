@@ -1059,3 +1059,19 @@ h3 {
   border-radius: 20px;
   margin-bottom: 20px;
 }
+.experience-row article {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-row article h3 {
+  min-height: 72px;
+}
+
+.experience-row article p {
+  min-height: 120px;
+}
+
+.experience-row article ul {
+  margin-top: auto;
+}
