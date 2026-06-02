@@ -323,3 +323,68 @@ resetButton.addEventListener("click", () => {
 
 renderOptions();
 renderResults();
+const explorerItems = [
+{
+  name: "Deadlocked Escape Rooms",
+  category: "experiences",
+  distance: "5.4 miles",
+  description: "Award winning escape rooms in Reading.",
+  link: "https://deadlockedrooms.com"
+},
+
+{
+  name: "Siren Craft Brew",
+  category: "beer",
+  distance: "4.8 miles",
+  description: "Independent Berkshire brewery and taproom.",
+  link: "https://www.sirencraftbrew.com"
+},
+
+{
+  name: "Double-Barrelled Brewery",
+  category: "beer",
+  distance: "6.2 miles",
+  description: "Modern brewery near Reading station.",
+  link: "https://doublebarrelled.co.uk"
+},
+
+{
+  name: "Anonymous Coffee",
+  category: "food",
+  distance: "0.5 miles",
+  description: "Speciality coffee roasters.",
+  link: "https://anonymouscoffee.co.uk"
+},
+
+{
+  name: "Henley-on-Thames",
+  category: "towns",
+  distance: "8.5 miles",
+  description: "Historic riverside town.",
+  link: "https://visit-henley.com"
+},
+
+{
+  name: "Dinton Pastures",
+  category: "walks",
+  distance: "4 miles",
+  description: "Lakeside walking routes.",
+  link: "https://www.dinton-pastures.co.uk"
+},
+
+{
+  name: "Beale Park",
+  category: "family",
+  distance: "12 miles",
+  description: "Wildlife and family attraction.",
+  link: "https://www.bealepark.org.uk"
+},
+
+{
+  name: "Wellington Country Park",
+  category: "family",
+  distance: "14 miles",
+  description: "Huge outdoor family attraction.",
+  link: "https://wellington-country-park.co.uk"
+}
+];
