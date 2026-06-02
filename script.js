@@ -1,33 +1,85 @@
 const preferences = [
   "Sauvignon Blanc",
   "Pinot Grigio",
-  "Albariño",
   "Chardonnay",
   "Riesling",
-  "Provence Rosé",
-  "Pinot Noir",
-  "Rioja",
-  "Malbec",
-  "Merlot",
-  "Prosecco",
-  "Champagne",
-  "English Sparkling",
-  "Natural Wine",
+  "Albariño",
+  "Viognier",
   "White Rioja",
-  "Beaujolais"
+
+  "Provence Rosé",
+  "Rosé",
+  "White Zinfandel",
+  "Sparkling Rosé",
+
+  "Pinot Noir",
+  "Merlot",
+  "Malbec",
+  "Rioja",
+  "Beaujolais",
+
+  "Champagne",
+  "Prosecco",
+  "English Sparkling",
+
+  "Natural Wine",
+  "Orange Wine",
+  "Fruit Wine"
 ];
 
 const wines = [
   {
+    name: "Bacchus Brut",
+    style: "Aromatic sparkling",
+    image: "images/stanlake-park-wine-guide-bacchus-brut.jpg",
+    matches: ["Prosecco", "Sauvignon Blanc", "English Sparkling"],
+    notes: "Fresh, aromatic and lively with a crisp finish.",
+    why: "Great if you like bright sparkling wines with aromatic freshness."
+  },
+  {
+    name: "Hinton Brut",
+    style: "Fresh sparkling",
+    image: "images/stanlake-park-wine-guide-hinton-brut.jpg",
+    matches: ["Champagne", "English Sparkling", "Prosecco"],
+    notes: "Bright, lively and celebratory.",
+    why: "A crowd pleasing sparkling wine for celebrations and gifts."
+  },
+  {
+    name: "Stanlake Brut",
+    style: "Classic sparkling",
+    image: "images/stanlake-park-wine-guide-stanlake-brut.jpg",
+    matches: ["Champagne", "English Sparkling"],
+    notes: "Classic, elegant and refreshing.",
+    why: "A strong match if you enjoy traditional sparkling wine styles."
+  },
+  {
+    name: "Rosé Superior",
+    style: "Sparkling rosé",
+    image: "images/stanlake-park-wine-guide-rose-superior.jpg",
+    matches: ["Sparkling Rosé", "Champagne", "English Sparkling", "Prosecco", "Rosé"],
+    notes: "Elegant, refreshing and celebratory.",
+    why: "One of our best sellers and a great choice for rosé and sparkling fans."
+  },
+  {
+    name: "Heritage Brut",
+    style: "Traditional method sparkling",
+    image: "images/stanlake-park-wine-guide-heritage-brut.jpg",
+    matches: ["Champagne", "English Sparkling"],
+    notes: "Fine bubbles, freshness and classic sparkling wine character.",
+    why: "Perfect if you usually choose Champagne or traditional method fizz."
+  },
+  {
     name: "Bacchus",
     style: "Fresh aromatic white",
-    matches: ["Sauvignon Blanc", "Pinot Grigio", "Albariño"],
+    image: "images/stanlake-park-wine-guide-bacchus.jpg",
+    matches: ["Sauvignon Blanc", "Pinot Grigio", "Albariño", "Riesling"],
     notes: "Zesty, aromatic and refreshing, with citrus, elderflower and green fruit character.",
     why: "A brilliant choice if you like crisp, bright whites with plenty of freshness."
   },
   {
     name: "Madeleine",
     style: "Light floral white",
+    image: "images/stanlake-park-wine-guide-madeleine.jpg",
     matches: ["Pinot Grigio", "Riesling"],
     notes: "Light, floral and delicate, with a gentle freshness.",
     why: "A good option if you enjoy easy drinking whites with lift and perfume."
@@ -35,27 +87,55 @@ const wines = [
   {
     name: "Kings Fumé",
     style: "Textured white",
+    image: "images/stanlake-park-wine-guide-kings-fume.jpg",
     matches: ["Chardonnay", "White Rioja"],
     notes: "Richer and more textured, with savoury depth and food friendly weight.",
     why: "Great if you like whites with more body and complexity."
   },
   {
+    name: "Regatta",
+    style: "Crisp white",
+    image: "images/stanlake-park-wine-guide-regatta.jpg",
+    matches: ["Sauvignon Blanc", "Pinot Grigio", "Albariño"],
+    notes: "Fresh, crisp and easy drinking.",
+    why: "A great match if you enjoy clean, refreshing white wines."
+  },
+  {
+    name: "Orange",
+    style: "Skin contact white",
+    image: "images/stanlake-park-wine-guide-orange.jpg",
+    matches: ["Natural Wine", "Orange Wine", "Riesling", "Albariño"],
+    notes: "Textural, expressive and a little more adventurous.",
+    why: "Choose this if you enjoy discovering something different."
+  },
+  {
     name: "Pinot Noir Rosé",
     style: "Dry English rosé",
-    matches: ["Provence Rosé", "Pinot Noir"],
+    image: "images/stanlake-park-wine-guide-pinot-noir-rose.jpg",
+    matches: ["Provence Rosé", "Pinot Noir", "Rosé"],
     notes: "Dry, crisp and refreshing with red berry fruit.",
-    why: "A natural next step for fans of pale, dry rosé styles."
+    why: "One of our best sellers and a natural choice for fans of pale, dry rosé."
   },
   {
-    name: "Rosé Superior",
-    style: "Fuller rosé",
-    matches: ["Provence Rosé", "Merlot"],
-    notes: "Fruit forward and generous, with a little more body.",
-    why: "Good if you want rosé with more flavour and presence."
+    name: "Pinot Low",
+    style: "Lower alcohol rosé",
+    image: "images/stanlake-park-wine-guide-pinot-low.jpg",
+    matches: ["Rosé", "Provence Rosé", "Pinot Grigio"],
+    notes: "Light, fresh and easy drinking.",
+    why: "A good match if you want something lighter and refreshing."
   },
   {
-    name: "Reserve",
+    name: "Berkshire Breeze: Peach",
+    style: "Peach flavoured wine drink",
+    image: "images/stanlake-park-wine-guide-berkshire-breeze-peach.jpg",
+    matches: ["Fruit Wine", "White Zinfandel", "Prosecco"],
+    notes: "Fresh, fruity and peachy.",
+    why: "A fun choice if you enjoy fruitier, lighter styles."
+  },
+  {
+    name: "The Reserve",
     style: "Elegant English red",
+    image: "images/stanlake-park-wine-guide-the-reserve.jpg",
     matches: ["Pinot Noir", "Rioja", "Beaujolais"],
     notes: "Red fruit, gentle spice and a lighter, elegant feel.",
     why: "Ideal for people who enjoy lighter reds rather than big, heavy styles."
@@ -63,37 +143,42 @@ const wines = [
   {
     name: "Cricket Grove",
     style: "Richer red",
+    image: "images/stanlake-park-wine-guide-cricket-grove.jpg",
     matches: ["Malbec", "Merlot", "Rioja"],
     notes: "Deeper fruit character with more structure and warmth.",
     why: "A good match for red wine drinkers looking for something fuller from Stanlake."
   },
   {
-    name: "Heritage Brut",
-    style: "Traditional method sparkling",
-    matches: ["Champagne", "English Sparkling"],
-    notes: "Fine bubbles, freshness and classic sparkling wine character.",
-    why: "Perfect if you usually choose Champagne, Crémant or traditional method fizz."
+    name: "Pinot Noir",
+    style: "Light red",
+    image: "images/stanlake-park-wine-guide-pinot-noir.jpg",
+    matches: ["Pinot Noir", "Beaujolais"],
+    notes: "Light, elegant and red fruited.",
+    why: "A great choice if you like delicate reds with freshness."
   },
   {
-    name: "Hinton Brut",
-    style: "Fresh sparkling",
-    matches: ["Champagne", "English Sparkling", "Prosecco"],
-    notes: "Bright, lively and celebratory.",
-    why: "A crowd pleasing sparkling wine for celebrations and gifts."
+    name: "Fiano",
+    style: "Italian white",
+    image: "images/stanlake-park-wine-guide-fiano.jpg",
+    matches: ["Chardonnay", "Viognier", "White Rioja"],
+    notes: "Textured, rounded and food friendly.",
+    why: "Good if you enjoy fuller whites with character."
   },
   {
-    name: "Bacchus Brut",
-    style: "Aromatic sparkling",
-    matches: ["Prosecco", "Sauvignon Blanc", "English Sparkling"],
-    notes: "Fresh, aromatic and lively with a crisp finish.",
-    why: "Great if you like easy, bright sparkling wines with aromatic freshness."
+    name: "Primitivo Rosé",
+    style: "Italian rosé",
+    image: "images/stanlake-park-wine-guide-primitivo-rose.jpg",
+    matches: ["Provence Rosé", "Rosé", "White Zinfandel"],
+    notes: "Fruity, bright and generous.",
+    why: "A good option if you like rosé with a little more fruit."
   },
   {
-    name: "Orange",
-    style: "Skin contact white",
-    matches: ["Natural Wine", "Riesling", "Albariño"],
-    notes: "Textural, expressive and a little more adventurous.",
-    why: "Choose this if you enjoy discovering something different."
+    name: "Negroamaro",
+    style: "Italian red",
+    image: "images/stanlake-park-wine-guide-negroamaro.jpg",
+    matches: ["Malbec", "Merlot", "Rioja"],
+    notes: "Rich, warm and full of dark fruit.",
+    why: "A great match for people who enjoy fuller red wines."
   }
 ];
 
@@ -117,10 +202,19 @@ function getSelectedPreferences() {
 }
 
 function calculateMatches(selected) {
+  const popularityBonus = {
+    "Pinot Noir Rosé": 4,
+    "Rosé Superior": 4,
+    "Bacchus": 2,
+    "Hinton Brut": 1
+  };
+
   return wines
     .map(wine => {
       const matchingPrefs = wine.matches.filter(match => selected.includes(match));
-      const score = matchingPrefs.length === 0 ? 0 : Math.min(98, 68 + matchingPrefs.length * 12);
+      const baseScore = matchingPrefs.length === 0 ? 0 : Math.min(96, 68 + matchingPrefs.length * 10);
+      const score = baseScore + (popularityBonus[wine.name] || 0);
+
       return { ...wine, matchingPrefs, score };
     })
     .filter(wine => wine.score > 0)
@@ -140,19 +234,27 @@ function renderResults() {
     return;
   }
 
-  const slugMap = {
-    "Bacchus": "bacchus",
-    "Madeleine": "madeleine",
-    "Kings Fumé": "kings-fume",
-    "Pinot Noir Rosé": "pinot-noir-rose",
-    "Rosé Superior": "rose-superior",
-    "Reserve": "reserve",
-    "Cricket Grove": "cricket-grove",
-    "Heritage Brut": "heritage-brut",
-    "Hinton Brut": "hinton-brut",
-    "Bacchus Brut": "bacchus-brut",
-    "Orange": "orange"
-  };
+ const slugMap = {
+  "Bacchus Brut": "bacchus-brut",
+  "Hinton Brut": "hinton-brut",
+  "Stanlake Brut": "stanlake-brut",
+  "Rosé Superior": "rose-superior",
+  "Heritage Brut": "heritage-brut",
+  "Bacchus": "bacchus",
+  "Madeleine": "madeleine",
+  "Kings Fumé": "kings-fume",
+  "Regatta": "regatta",
+  "Orange": "orange",
+  "Pinot Noir Rosé": "pinot-noir-rose",
+  "Pinot Low": "pinot-low",
+  "Berkshire Breeze: Peach": "berkshire-breeze-peach",
+  "The Reserve": "the-reserve",
+  "Cricket Grove": "cricket-grove",
+  "Pinot Noir": "pinot-noir",
+  "Fiano": "fiano",
+  "Primitivo Rosé": "primitivo-rose",
+  "Negroamaro": "negroamaro"
+};
 
   emptyEl.style.display = "none";
 
@@ -161,8 +263,9 @@ function renderResults() {
     const wineUrl = `https://www.stanlakepark.com/product/${slug}/?utm_source=experience_hub&utm_medium=wine_matcher&utm_campaign=find_your_wine`;
 
     return `
-      <article class="result-card">
-        <div>
+<article class="result-card">
+  <img src="${wine.image}" alt="${wine.name} bottle" class="wine-result-image">
+  <div>
           <p class="card-label">Match ${index + 1}</p>
           <h3>${wine.name}</h3>
           <p><strong>${wine.style}</strong></p>
