@@ -1052,3 +1052,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+.tour-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
