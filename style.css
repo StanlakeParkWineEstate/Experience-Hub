@@ -1100,27 +1100,41 @@ h3 {
 }
 .tour-highlights {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 14px;
   margin-top: 32px;
-  margin-bottom: 42px;
+  margin-bottom: 34px;
+  max-width: 100%;
 }
 
 .highlight-card {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 18px;
-  padding: 18px 20px;
-  min-height: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 22px;
+  padding: 18px 22px;
 }
 
-.highlight-card p {
-  display: none;
+.highlight-card span {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.16);
+  font-size: 1.4rem;
 }
 
 .highlight-card h3 {
   margin: 0;
-  font-size: 1rem;
+  color: white;
+  font-size: 1.15rem;
+}
+
+.highlight-card p {
+  display: none;
 }
 
 @media (max-width: 900px) {
