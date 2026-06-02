@@ -477,53 +477,78 @@
       </section>
 
       <section id="nearby" class="feature-section nearby-section">
-        <div class="section-intro">
-          <p class="eyebrow">Around Stanlake Park</p>
-          <h2>Turn the visit into a day out.</h2>
-          <p>Use these ideas before booking, after booking or while you’re already here.</p>
-        </div>
+        <section id="nearby" class="feature-section nearby-section">
 
-        <div class="nearby-board">
-          <button class="nearby-tile active" data-panel="food">
-            <span>🍺</span>
-            <strong>Food & drink</strong>
-            <small>Craft beer, coffee, pubs and Wine Bar stops</small>
-          </button>
-          <button class="nearby-tile" data-panel="walks">
-            <span>🚶</span>
-            <strong>Walks</strong>
-            <small>Riverside routes and countryside strolls</small>
-          </button>
-          <button class="nearby-tile" data-panel="towns">
-            <span>🏘️</span>
-            <strong>Towns</strong>
-            <small>Twyford, Reading, Henley and Marlow</small>
-          </button>
-          <button class="nearby-tile" data-panel="rain">
-            <span>🌧️</span>
-            <strong>Rainy day</strong>
-            <small>Indoor backups and cosy options</small>
-          </button>
-        </div>
+  <div class="section-intro">
+    <p class="eyebrow">Explore Berkshire</p>
 
-        <div class="nearby-detail">
-          <div class="nearby-panel active" id="food">
-            <h3>Food and drink lovers</h3>
-            <p>Pair the Wine Bar with local breweries, independent coffee, good pubs and Thames Valley restaurants.</p>
-          </div>
-          <div class="nearby-panel" id="walks">
-            <h3>Walks and fresh air</h3>
-            <p>Build in a gentle local walk before or after your tasting, especially if you’re making a full day of it.</p>
-          </div>
-          <div class="nearby-panel" id="towns">
-            <h3>Nearby towns</h3>
-            <p>Explore Twyford for convenience, Reading for shopping and culture, Henley for the river, and Marlow or Windsor for a bigger day out.</p>
-          </div>
-          <div class="nearby-panel" id="rain">
-            <h3>Rainy day ideas</h3>
-            <p>Use indoor tastings, the Wine Bar, Reading shopping, escape rooms, museums and cosy pubs as your backup plan.</p>
-          </div>
-        </div>
+```
+<h2>Build the perfect day out.</h2>
+
+<p>
+  Stanlake Park is perfectly placed for great food, local breweries,
+  riverside walks, historic towns, family attractions and unique
+  experiences across Berkshire and the Thames Valley.
+</p>
+```
+
+  </div>
+
+  <div class="explorer-tabs">
+    <button class="explorer-tab active" data-category="all">
+      All
+    </button>
+
+```
+<button class="explorer-tab" data-category="food">
+  Food & Drink
+</button>
+
+<button class="explorer-tab" data-category="beer">
+  Craft Beer
+</button>
+
+<button class="explorer-tab" data-category="walks">
+  Walks
+</button>
+
+<button class="explorer-tab" data-category="towns">
+  Towns
+</button>
+
+<button class="explorer-tab" data-category="experiences">
+  Experiences
+</button>
+
+<button class="explorer-tab" data-category="family">
+  Family Days Out
+</button>
+```
+
+  </div>
+
+<input
+type="text"
+id="explorerSearch"
+class="explorer-search"
+placeholder="Search nearby attractions, restaurants, breweries and experiences..."
+
+>
+
+  <div id="explorerGrid" class="explorer-grid"></div>
+
+  <div class="explorer-footer">
+    <a
+      href="https://stanlakepark.com/read-this-before-you-think-about-visiting-reading/"
+      target="_blank"
+      class="estate-history-button"
+    >
+      Looking for even more ideas nearby? →
+    </a>
+  </div>
+
+</section>
+
       </section>
 
       <section class="closing">
