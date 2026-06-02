@@ -1100,21 +1100,22 @@ h3 {
 }
 .tour-highlights {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
   margin-top: 32px;
   margin-bottom: 34px;
-  max-width: 100%;
+  width: 100%;
 }
 
 .highlight-card {
   display: flex;
-  align-items: center;
-  gap: 18px;
+  align-items: flex-start;
+  gap: 16px;
   background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.16);
   border-radius: 22px;
-  padding: 18px 22px;
+  padding: 22px;
+  min-height: 150px;
 }
 
 .highlight-card span {
@@ -1128,18 +1129,21 @@ h3 {
 }
 
 .highlight-card h3 {
-  margin: 0;
+  margin: 0 0 8px;
   color: white;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 .highlight-card p {
-  display: none;
+  display: block;
+  margin: 0;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.45;
 }
 
 @media (max-width: 900px) {
   .tour-highlights {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
