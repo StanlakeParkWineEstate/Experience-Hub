@@ -31,7 +31,7 @@ const wines = [
   {
     name: "Bacchus Brut",
     style: "Aromatic sparkling",
-    image: "images/stanlake-park-wine-guide-bacchus-brut.jpg",
+    image: "images/shad-sparkling-bacchus-brut--front-no-background-stanlake-park.png",
     matches: ["Prosecco", "Sauvignon Blanc", "English Sparkling"],
     notes: "Fresh, aromatic and lively with a crisp finish.",
     why: "Great if you like bright sparkling wines with aromatic freshness."
@@ -39,7 +39,7 @@ const wines = [
   {
     name: "Hinton Brut",
     style: "Fresh sparkling",
-    image: "images/stanlake-park-wine-guide-hinton-brut.jpg",
+    image: "images/shad-sparkling-hinton-brut-front-no-background-stanlake-park.png",
     matches: ["Champagne", "English Sparkling", "Prosecco"],
     notes: "Bright, lively and celebratory.",
     why: "A crowd pleasing sparkling wine for celebrations and gifts."
@@ -47,7 +47,7 @@ const wines = [
   {
     name: "Stanlake Brut",
     style: "Classic sparkling",
-    image: "images/stanlake-park-wine-guide-stanlake-brut.jpg",
+    image: "images/shad-sparkling-stanlake-brut-front-no-background-stanlake-park.png",
     matches: ["Champagne", "English Sparkling"],
     notes: "Classic, elegant and refreshing.",
     why: "A strong match if you enjoy traditional sparkling wine styles."
@@ -55,7 +55,7 @@ const wines = [
   {
     name: "Rosé Superior",
     style: "Sparkling rosé",
-    image: "images/stanlake-park-wine-guide-rose-superior.jpg",
+    image: "images/shad-sparkling-rose-superior-front-no-background-stanlake-park.png",
     matches: ["Sparkling Rosé", "Champagne", "English Sparkling", "Prosecco", "Rosé"],
     notes: "Elegant, refreshing and celebratory.",
     why: "One of our best sellers and a great choice for rosé and sparkling fans."
@@ -63,7 +63,7 @@ const wines = [
   {
     name: "Heritage Brut",
     style: "Traditional method sparkling",
-    image: "images/stanlake-park-wine-guide-heritage-brut.jpg",
+    image: "images/shad-sparkling-heritage-brut-front-no-background-stanlake-park.png",
     matches: ["Champagne", "English Sparkling"],
     notes: "Fine bubbles, freshness and classic sparkling wine character.",
     why: "Perfect if you usually choose Champagne or traditional method fizz."
@@ -71,7 +71,7 @@ const wines = [
   {
     name: "Bacchus",
     style: "Fresh aromatic white",
-    image: "images/stanlake-park-wine-guide-bacchus.jpg",
+    image: "images/shad-bacchus-front-no-background-stanlake-park.png",
     matches: ["Sauvignon Blanc", "Pinot Grigio", "Albariño", "Riesling"],
     notes: "Zesty, aromatic and refreshing, with citrus, elderflower and green fruit character.",
     why: "A brilliant choice if you like crisp, bright whites with plenty of freshness."
@@ -79,7 +79,7 @@ const wines = [
   {
     name: "Madeleine",
     style: "Light floral white",
-    image: "images/stanlake-park-wine-guide-madeleine.jpg",
+    image: "images/shad-madelaine-front-no-background-stanlake-park.png",
     matches: ["Pinot Grigio", "Riesling"],
     notes: "Light, floral and delicate, with a gentle freshness.",
     why: "A good option if you enjoy easy drinking whites with lift and perfume."
@@ -87,7 +87,7 @@ const wines = [
   {
     name: "Kings Fumé",
     style: "Textured white",
-    image: "images/stanlake-park-wine-guide-kings-fume.jpg",
+    image: "images/shad-kings-fume-front-no-background-stanlake-park.png",
     matches: ["Chardonnay", "White Rioja"],
     notes: "Richer and more textured, with savoury depth and food friendly weight.",
     why: "Great if you like whites with more body and complexity."
@@ -95,7 +95,7 @@ const wines = [
   {
     name: "Regatta",
     style: "Crisp white",
-    image: "images/stanlake-park-wine-guide-regatta.jpg",
+    image: "images/shad-regatta-front-no-background-stanlake-park.png",
     matches: ["Sauvignon Blanc", "Pinot Grigio", "Albariño"],
     notes: "Fresh, crisp and easy drinking.",
     why: "A great match if you enjoy clean, refreshing white wines."
@@ -103,7 +103,7 @@ const wines = [
   {
     name: "Orange",
     style: "Skin contact white",
-    image: "images/stanlake-park-wine-guide-orange.jpg",
+    image: "images/shad-orange-front-no-background-stanlake-park.png",
     matches: ["Natural Wine", "Orange Wine", "Riesling", "Albariño"],
     notes: "Textural, expressive and a little more adventurous.",
     why: "Choose this if you enjoy discovering something different."
@@ -111,7 +111,7 @@ const wines = [
   {
     name: "Pinot Noir Rosé",
     style: "Dry English rosé",
-    image: "images/stanlake-park-wine-guide-pinot-noir-rose.jpg",
+    image: "images/shad-pinot-noir-rose-front-no-background-stanlake-park.png",
     matches: ["Provence Rosé", "Pinot Noir", "Rosé"],
     notes: "Dry, crisp and refreshing with red berry fruit.",
     why: "One of our best sellers and a natural choice for fans of pale, dry rosé."
@@ -119,7 +119,7 @@ const wines = [
   {
     name: "Pinot Low",
     style: "Lower alcohol rosé",
-    image: "images/stanlake-park-wine-guide-pinot-low.jpg",
+    image: "images/shad-pinot-low-front-no-background-stanlake-park.png",
     matches: ["Rosé", "Provence Rosé", "Pinot Grigio"],
     notes: "Light, fresh and easy drinking.",
     why: "A good match if you want something lighter and refreshing."
@@ -127,7 +127,7 @@ const wines = [
   {
     name: "Berkshire Breeze: Peach",
     style: "Peach flavoured wine drink",
-    image: "images/stanlake-park-wine-guide-berkshire-breeze-peach.jpg",
+    image: "images/shad-berkshire-breeze-front-no-background-stanlake-park.png",
     matches: ["Fruit Wine", "White Zinfandel", "Prosecco"],
     notes: "Fresh, fruity and peachy.",
     why: "A fun choice if you enjoy fruitier, lighter styles."
@@ -135,7 +135,7 @@ const wines = [
   {
     name: "The Reserve",
     style: "Elegant English red",
-    image: "images/stanlake-park-wine-guide-the-reserve.jpg",
+    image: "images/shad-the-reserve-front-no-background-stanlake-park.png",
     matches: ["Pinot Noir", "Rioja", "Beaujolais"],
     notes: "Red fruit, gentle spice and a lighter, elegant feel.",
     why: "Ideal for people who enjoy lighter reds rather than big, heavy styles."
@@ -143,7 +143,7 @@ const wines = [
   {
     name: "Cricket Grove",
     style: "Richer red",
-    image: "images/stanlake-park-wine-guide-cricket-grove.jpg",
+    image: "images/shad-cricket-grove-front-no-background-stanlake-park.png",
     matches: ["Malbec", "Merlot", "Rioja"],
     notes: "Deeper fruit character with more structure and warmth.",
     why: "A good match for red wine drinkers looking for something fuller from Stanlake."
@@ -151,7 +151,7 @@ const wines = [
   {
     name: "Pinot Noir",
     style: "Light red",
-    image: "images/stanlake-park-wine-guide-pinot-noir.jpg",
+    image: "images/shad-pinot-noir-front-no-background-stanlake-park.png",
     matches: ["Pinot Noir", "Beaujolais"],
     notes: "Light, elegant and red fruited.",
     why: "A great choice if you like delicate reds with freshness."
@@ -159,7 +159,7 @@ const wines = [
   {
     name: "Fiano",
     style: "Italian white",
-    image: "images/stanlake-park-wine-guide-fiano.jpg",
+    image: "images/shad-fiano-front-no-background-stanlake-park.png",
     matches: ["Chardonnay", "Viognier", "White Rioja"],
     notes: "Textured, rounded and food friendly.",
     why: "Good if you enjoy fuller whites with character."
@@ -167,7 +167,7 @@ const wines = [
   {
     name: "Primitivo Rosé",
     style: "Italian rosé",
-    image: "images/stanlake-park-wine-guide-primitivo-rose.jpg",
+    image: "images/shad-primitivo-rose-front-no-background-stanlake-park.png",
     matches: ["Provence Rosé", "Rosé", "White Zinfandel"],
     notes: "Fruity, bright and generous.",
     why: "A good option if you like rosé with a little more fruit."
@@ -175,7 +175,7 @@ const wines = [
   {
     name: "Negroamaro",
     style: "Italian red",
-    image: "images/stanlake-park-wine-guide-negroamaro.jpg",
+    image: "images/shad-negroamaro-front-no-background-stanlake-park.png",
     matches: ["Malbec", "Merlot", "Rioja"],
     notes: "Rich, warm and full of dark fruit.",
     why: "A great match for people who enjoy fuller red wines."
