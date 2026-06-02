@@ -203,10 +203,10 @@ function getSelectedPreferences() {
 
 function calculateMatches(selected) {
   const popularityBonus = {
-    "Pinot Noir Rosé": 4,
-    "Rosé Superior": 4,
-    "Bacchus": 2,
-    "Hinton Brut": 1
+    "Pinot Noir Rosé": 8,
+    "Rosé Superior": 8,
+    "Bacchus": 3,
+    "Hinton Brut": 2
   };
 
   return wines
