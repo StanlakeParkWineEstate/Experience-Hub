@@ -1202,3 +1202,17 @@ h3 {
     justify-self: center;
   }
 }
+.estate-button {
+  display: inline-flex;
+  margin-top: 24px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2f6f46;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.estate-button:hover {
+  opacity: 0.9;
+}
