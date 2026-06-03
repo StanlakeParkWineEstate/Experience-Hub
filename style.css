@@ -1650,3 +1650,66 @@ color:white;
   }
 
 }
+.estate-wedding-callout {
+
+  display: flex;
+
+  gap: 18px;
+
+  align-items: flex-start;
+
+  margin-top: 28px;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+}
+
+.estate-wedding-callout span {
+
+  font-size: 1.8rem;
+
+  line-height: 1;
+
+}
+
+.estate-wedding-callout h3 {
+
+  color: white;
+
+  margin: 0 0 8px;
+
+  font-size: 1.1rem;
+
+}
+
+.estate-wedding-callout p {
+
+  color: rgba(255,255,255,0.85);
+
+  margin: 0 0 10px;
+
+  font-size: 0.95rem;
+
+}
+
+.estate-wedding-callout a {
+
+  color: white;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+}
+
+.estate-wedding-callout a:hover {
+
+  text-decoration: underline;
+
+}
