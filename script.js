@@ -1146,19 +1146,3 @@ if (clearExperienceButton) {
     }
   });
 }
-const clearExperienceButton = document.getElementById("clearExperienceButton");
-
-if (clearExperienceButton) {
-  clearExperienceButton.addEventListener("click", () => {
-    document
-      .querySelectorAll(".experience-options button")
-      .forEach(button => button.classList.remove("active"));
-
-    const resultBox = document.getElementById("experienceResult");
-
-    if (resultBox) {
-      resultBox.style.display = "none";
-      resultBox.innerHTML = "";
-    }
-  });
-}
