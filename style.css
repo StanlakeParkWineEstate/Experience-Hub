@@ -1735,13 +1735,13 @@ color:white;
   text-decoration: underline;
 
 }
-.final-cta {
-  background: #347a47;
-  color: white;
-  text-align: center;
-  padding: 50px 40px;
-  border-radius: 36px;
-  margin: 50px 0;
+.final-cta{
+  background:#347a47;
+  color:white;
+  text-align:center;
+  padding:35px 40px;
+  border-radius:36px;
+  margin:80px 0;
 }
 
 .final-cta h2 {
