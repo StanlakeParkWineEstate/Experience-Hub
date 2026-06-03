@@ -1023,3 +1023,27 @@ document.getElementById("experienceMatchButton").addEventListener("click", () =>
     </div>
   `;
 });
+const clearExplorerButton = document.getElementById("clearExplorerFilters");
+
+if (clearExplorerButton) {
+  clearExplorerButton.addEventListener("click", () => {
+    currentCategory = null;
+
+    document
+      .querySelectorAll(".explorer-tab")
+      .forEach(tab => tab.classList.remove("active"));
+
+    const explorerSearch = document.getElementById("explorerSearch");
+
+    if (explorerSearch) {
+      explorerSearch.value = "";
+    }
+
+    explorerGrid.innerHTML = `
+      <div class="explorer-empty">
+        <h3>Choose a category to start exploring</h3>
+        <p>Find pubs, restaurants, breweries, walks, towns, family days out and local experiences near Stanlake Park.</p>
+      </div>
+    `;
+  });
+}
