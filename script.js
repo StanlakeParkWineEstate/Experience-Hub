@@ -880,7 +880,7 @@ const experiences = [
     name: "Wine Tour & Tasting",
     badge: "🍷 Most Popular",
     score: 8,
-    tags: ["day out", "wine", "vineyard", "winery", "learning", "unique"],
+    tags: ["day out", "wine", "vineyard", "winery", "learning", "unique", "relaxed"],
     description: "Explore the vineyard and winery before tasting six wines with one of our friendly guides.",
     reasons: ["You want the full Stanlake Park experience", "You are interested in wine", "You want to see the vineyard and winery"],
     addon: "Stay for food or a glass of wine in the Wine Bar afterwards.",
@@ -991,7 +991,8 @@ const results = experiences
   })
   .map(experience => {
     const matches = experience.tags.filter(tag => selected.includes(tag));
-    const score = matches.length * 18 + experience.score;
+    const matchRatio = matches.length / selected.length;
+    const score = Math.round((matchRatio * 85) + experience.score);
 
     return {
       ...experience,
