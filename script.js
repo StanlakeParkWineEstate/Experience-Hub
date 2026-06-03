@@ -980,20 +980,27 @@ document.getElementById("experienceMatchButton").addEventListener("click", () =>
     `;
     return;
   }
+const wantsWedding = selected.includes("wedding");
+const results = experiences
+  .filter(experience => {
+    if (experience.name === "Wedding Show Round") {
+      return wantsWedding;
+    }
 
-  const results = experiences
-    .map(experience => {
-      const matches = experience.tags.filter(tag => selected.includes(tag));
-      const score = matches.length * 18 + experience.score;
+    return true;
+  })
+  .map(experience => {
+    const matches = experience.tags.filter(tag => selected.includes(tag));
+    const score = matches.length * 18 + experience.score;
 
-      return {
-        ...experience,
-        matches,
-        finalScore: Math.min(score, 99)
-      };
-    })
-    .filter(experience => experience.finalScore > experience.score)
-    .sort((a, b) => b.finalScore - a.finalScore);
+    return {
+      ...experience,
+      matches,
+      finalScore: Math.min(score, 99)
+    };
+  })
+  .filter(experience => experience.finalScore > experience.score)
+  .sort((a, b) => b.finalScore - a.finalScore);
 
   const best = results[0];
 
