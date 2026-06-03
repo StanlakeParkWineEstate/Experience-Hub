@@ -1458,3 +1458,23 @@ color:white;
   text-decoration:none;
   font-weight:700;
 }
+.sticky-tour-button{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+
+  z-index:9999;
+
+  background:#2f6f44;
+  color:white;
+
+  padding:16px 24px;
+
+  border-radius:999px;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+}
