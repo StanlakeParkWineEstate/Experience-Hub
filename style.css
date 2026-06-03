@@ -1556,13 +1556,13 @@ color:white;
 
   padding: 14px 24px;
 
-  background: #2f6f44;
-  color: white;
+  background: white;
+  color: #2f6f44;
 
   text-decoration: none;
   border-radius: 999px;
 
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .tour-secondary-btn {
@@ -1571,30 +1571,40 @@ color:white;
 
   padding: 14px 24px;
 
-  background: #f3f1ec;
-  color: var(--ink);
+  background: rgba(255,255,255,0.15);
+  color: white;
 
   text-decoration: none;
   border-radius: 999px;
 
   font-weight: 700;
+
+  border: 1px solid rgba(255,255,255,0.25);
 }
 
 @media (max-width: 900px) {
 
-  .tour-cta-strip {
-    flex-direction: column;
-    text-align: center;
-  }
+.tour-cta-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  .tour-cta-actions {
-    flex-direction: column;
-    width: 100%;
-  }
+  gap: 24px;
 
-  .tour-primary-btn,
-  .tour-secondary-btn {
-    justify-content: center;
-  }
+  padding: 40px 50px;
+  margin: 80px 0;
+
+  background: #2f6f44;
+  color: white;
+
+  border-radius: 24px;
+}
+
+.tour-cta-strip p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
 
 }
