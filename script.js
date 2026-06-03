@@ -778,18 +778,29 @@ document.getElementById("explorerGrid");
 const searchInput =
 document.getElementById("explorerSearch");
 
-let currentCategory = "all";
+let currentCategory = null;
 
 function renderExplorer() {
   const search = searchInput.value.toLowerCase();
 
   explorerGrid.innerHTML = "";
-
+if (!currentCategory && !search) {
+  explorerGrid.innerHTML = `
+    <div class="explorer-empty">
+      <h3>Choose a category to start exploring</h3>
+      <p>Find pubs, restaurants, breweries, walks, towns, family days out and local experiences near Stanlake Park.</p>
+    </div>
+  `;
+  return;
+}
   explorerItems
     .filter(item => {
-      const categoryMatch =
-        currentCategory === "all" ||
-        item.category === currentCategory;
+const categoryMatch =
+  currentCategory &&
+  (
+    currentCategory === "all" ||
+    item.category === currentCategory
+  );
 
       const searchMatch =
         item.name.toLowerCase().includes(search) ||
