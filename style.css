@@ -1875,3 +1875,46 @@ color:white;
   text-decoration: none;
   font-weight: 900;
 }
+.experience-matcher-section .section-intro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experience-helper {
+  margin-top: 10px;
+  color: var(--wine);
+  font-weight: 900;
+}
+
+.experience-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.experience-match-button,
+.experience-clear-button {
+  border: 0;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.experience-match-button {
+  background: #2f6f44;
+  color: #ffffff;
+}
+
+.experience-clear-button {
+  background: #f4f0e8;
+  color: #2f6f44;
+}
+
+.experience-match-button:hover,
+.experience-clear-button:hover {
+  transform: translateY(-3px);
+}
