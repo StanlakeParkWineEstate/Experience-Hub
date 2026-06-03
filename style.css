@@ -1714,13 +1714,29 @@ color:white;
 
 }
 .final-cta {
-  padding: 40px;
+  background: #347a47;
+  color: white;
+  text-align: center;
+  padding: 50px 40px;
+  border-radius: 36px;
+  margin: 80px 0;
 }
 
 .final-cta h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-family: "Iowan Old Style", serif;
+  font-size: clamp(2rem, 3vw, 3.25rem);
+  line-height: 1.1;
+  margin-bottom: 12px;
 }
 
-.final-cta-button {
-  margin: 20px 0;
+.final-cta p {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.final-cta-stats {
+  margin-top: 24px;
+  font-size: 1rem;
+  opacity: 0.85;
 }
