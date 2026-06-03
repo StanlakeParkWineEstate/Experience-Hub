@@ -1478,7 +1478,26 @@ color:white;
 .tour-cta-button:active{
   transform:translateY(0);
 }
+.final-tour-cta {
+  margin-top: 36px;
+}
 
+.final-tour-cta h3 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+.final-tour-cta p {
+  color: rgba(255,255,255,0.9);
+}
+
+.tour-cta-small {
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
 }
 .sticky-tour-button{
   position:fixed;
@@ -1735,63 +1754,7 @@ color:white;
   text-decoration: underline;
 
 }
-.final-cta{
-  background:#347a47;
-  color:white;
-  text-align:center;
 
-  padding:30px 40px;
-  border-radius:36px;
-  margin:80px 0;
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:16px;
-}
-
-.final-cta h2{
-  font-family:"Iowan Old Style", serif;
-  font-size:clamp(1.8rem,2.6vw,2.8rem);
-  line-height:1.1;
-  margin:0;
-}
-
-.final-cta-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-
-  background:#ffffff;
-  color:#347a47;
-
-  padding:14px 30px;
-  border-radius:999px;
-
-  text-decoration:none;
-  font-weight:800;
-
-  margin:0;
-
-  box-shadow:0 8px 24px rgba(0,0,0,0.15);
-  transition:all 0.25s ease;
-}
-
-.final-cta-stats{
-  margin:0;
-  font-size:1rem;
-  opacity:0.9;
-}
-
-.final-cta-button:hover{
-  transform:translateY(-3px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.20);
-}
-
-.final-cta-button:active{
-  transform:translateY(0);
-}
 .sticky-tour-button{
   position:fixed;
   bottom:24px;
