@@ -1608,3 +1608,8 @@ color:white;
 }
 
 }
+.tour-cta-note {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
