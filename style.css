@@ -1478,3 +1478,48 @@ color:white;
 
   box-shadow:0 12px 30px rgba(0,0,0,.18);
 }
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.popular-card {
+  padding: 30px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid rgba(32,25,22,0.10);
+  box-shadow: var(--shadow-soft);
+}
+
+.popular-card span {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.popular-card h3 {
+  margin: 0 0 12px;
+}
+
+.popular-card p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.popular-card a {
+  display: inline-flex;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #2f6f44;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .popular-grid {
+    grid-template-columns: 1fr;
+  }
+}
