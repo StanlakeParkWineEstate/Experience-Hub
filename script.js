@@ -844,20 +844,21 @@ document
 .querySelectorAll(".explorer-tab")
 .forEach(tab => {
 
-tab.addEventListener("click", () => {
+  tab.addEventListener("click", () => {
 
-document
-.querySelectorAll(".explorer-tab")
-.forEach(t =>
-t.classList.remove("active")
-);
+    document
+      .querySelectorAll(".explorer-tab")
+      .forEach(t =>
+        t.classList.remove("active")
+      );
 
-tab.classList.add("active");
+    tab.classList.add("active");
 
-currentCategory =
-tab.dataset.category;
+    currentCategory =
+      tab.dataset.category;
 
-renderExplorer();
+    renderExplorer();
+
+  });
 
 });
-
