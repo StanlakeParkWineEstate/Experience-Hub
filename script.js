@@ -879,82 +879,130 @@ const experiences = [
   {
     name: "Wine Tour & Tasting",
     badge: "🍷 Most Popular",
-    score: 8,
+    bestFor: "First time visitors",
     tags: ["day out", "wine", "vineyard", "winery", "learning", "unique", "relaxed"],
+    popularity: 12,
     description: "Explore the vineyard and winery before tasting six wines with one of our friendly guides.",
-    reasons: ["You want the full Stanlake Park experience", "You are interested in wine", "You want to see the vineyard and winery"],
+    reasons: [
+      "You want the full Stanlake Park experience",
+      "You are interested in wine",
+      "You want to see the vineyard and winery"
+    ],
     addon: "Stay for food or a glass of wine in the Wine Bar afterwards.",
-    link: "https://stanlakepark.com/wine-tours/"
+    link: "https://stanlakepark.com/wine-tours/",
+    cta: "View Tour Dates"
   },
   {
     name: "Cheese & Wine Tour",
     badge: "🧀 Food Lover Favourite",
-    score: 6,
-    tags: ["food", "wine", "pairings", "day out", "date", "special occasion"],
+    bestFor: "Food lovers",
+    tags: ["food", "wine", "pairings", "day out", "date", "special occasion", "gift", "relaxed"],
+    popularity: 10,
     description: "A guided vineyard and winery tour with cheese and wine pairings included.",
-    reasons: ["You enjoy food and wine together", "You want a more indulgent tour", "You are planning a date or special occasion"],
+    reasons: [
+      "You enjoy food and wine together",
+      "You want a more indulgent tour",
+      "You are planning a date, gift or special occasion"
+    ],
     addon: "Make it a full afternoon with a drink in the Wine Bar.",
-    link: "https://stanlakepark.com/wine-tours/"
+    link: "https://stanlakepark.com/wine-tours/",
+    cta: "Explore Cheese Tours"
   },
   {
     name: "Cheese & Wine Tasting",
     badge: "🧀 Relaxed Tasting",
-    score: 4,
-    tags: ["food", "wine", "pairings", "relaxed"],
+    bestFor: "A shorter seated tasting",
+    tags: ["food", "wine", "pairings", "relaxed", "gift"],
+    popularity: 7,
     description: "A seated tasting experience pairing Stanlake Park wines with cheese.",
-    reasons: ["You want a relaxed tasting", "You love food pairings", "You do not need the full vineyard tour"],
+    reasons: [
+      "You want a relaxed tasting",
+      "You love food pairings",
+      "You do not need the full vineyard tour"
+    ],
     addon: "Great before or after lunch nearby.",
-    link: "https://stanlakepark.com/wine-tastings/"
+    link: "https://stanlakepark.com/wine-tastings/",
+    cta: "View Tastings"
   },
   {
     name: "Wine Tour & Cream Tea",
     badge: "☕ Afternoon Treat",
-    score: 4,
-    tags: ["relaxed", "date", "special occasion", "vineyard", "day out"],
+    bestFor: "A relaxed afternoon",
+    tags: ["relaxed", "date", "special occasion", "vineyard", "day out", "gift"],
+    popularity: 7,
     description: "Enjoy a vineyard tour and tasting followed by a cream tea.",
-    reasons: ["You want a slower afternoon", "You are planning something relaxed", "You like a classic countryside treat"],
+    reasons: [
+      "You want a slower afternoon",
+      "You are planning something relaxed",
+      "You like a classic countryside treat"
+    ],
     addon: "Perfect for couples and relaxed celebrations.",
-    link: "https://stanlakepark.com/wine-tours/"
+    link: "https://stanlakepark.com/wine-tours/",
+    cta: "Explore Cream Tea Tours"
   },
   {
     name: "Monthly Wine Tastings with Natalia",
     badge: "🍷 Hosted by Natalia DipWSET",
-    score: 5,
+    bestFor: "Curious wine drinkers",
     tags: ["learning", "wine", "world wine", "unique", "friends"],
+    popularity: 9,
     description: "Hosted by Natalia Pezzone DipWSET, these monthly tastings explore wine regions, grapes and styles from around the world.",
-    reasons: ["You enjoy learning about wine", "You want something different from a vineyard tour", "You are curious about wines from around the world"],
+    reasons: [
+      "You enjoy learning about wine",
+      "You want something different from a vineyard tour",
+      "You are curious about wines from around the world"
+    ],
     addon: "Ideal for returning visitors, WSET students and curious wine drinkers.",
-    link: "https://stanlakepark.com/events/"
+    link: "https://stanlakepark.com/events/",
+    cta: "View Upcoming Tastings"
   },
   {
     name: "North Lodge Stay",
     badge: "❤️ Romantic Stay",
-    score: 3,
+    bestFor: "Couples and weekend breaks",
     tags: ["date", "weekend", "overnight", "relaxed", "special occasion"],
+    popularity: 6,
     description: "A vineyard stay for two, perfect for a romantic getaway.",
-    reasons: ["You are planning a special visit", "You want to stay overnight", "You want something memorable"],
+    reasons: [
+      "You are planning a special visit",
+      "You want to stay overnight",
+      "You want something memorable"
+    ],
     addon: "Add a Wine Tour & Tasting during your stay.",
-    link: "https://stanlakepark.com/accommodation/"
+    link: "https://stanlakepark.com/accommodation/",
+    cta: "Explore Stays"
   },
   {
     name: "South Lodge Stay",
     badge: "🏡 Group Getaway",
-    score: 3,
+    bestFor: "Friends, families and groups",
     tags: ["friends", "weekend", "overnight", "special occasion"],
+    popularity: 5,
     description: "A spacious vineyard stay for friends, families and group getaways.",
-    reasons: ["You are bringing a group", "You want to stay overnight", "You are planning a celebration"],
+    reasons: [
+      "You are bringing a group",
+      "You want to stay overnight",
+      "You are planning a celebration"
+    ],
     addon: "Pair it with a group tasting or Wine Bar visit.",
-    link: "https://stanlakepark.com/accommodation/"
+    link: "https://stanlakepark.com/accommodation/",
+    cta: "Explore Group Stays"
   },
   {
     name: "Wedding Show Round",
     badge: "💍 Wedding Planning",
-    score: 10,
-    tags: ["wedding", "special occasion", "unique"],
+    bestFor: "Engaged couples",
+    tags: ["wedding"],
+    popularity: 20,
     description: "Explore our vineyard wedding venue and see how your day could look.",
-    reasons: ["You are planning a wedding", "You love the estate setting", "You want something personal and memorable"],
+    reasons: [
+      "You are planning a wedding",
+      "You love the estate setting",
+      "You want something personal and memorable"
+    ],
     addon: "Book a show round and explore the venue in person.",
-    link: "https://stanlakepark.com/weddings/"
+    link: "https://stanlakepark.com/weddings/",
+    cta: "Book a Show Round"
   }
 ];
 
@@ -964,95 +1012,138 @@ document.querySelectorAll(".experience-options button").forEach(button => {
   });
 });
 
-document.getElementById("experienceMatchButton").addEventListener("click", () => {
-  const selected = Array.from(document.querySelectorAll(".experience-options button.active"))
-    .map(button => button.dataset.value);
+const experienceMatchButton = document.getElementById("experienceMatchButton");
+const experienceResult = document.getElementById("experienceResult");
 
-  const resultBox = document.getElementById("experienceResult");
+if (experienceMatchButton) {
+  experienceMatchButton.addEventListener("click", () => {
+    const selected = Array.from(document.querySelectorAll(".experience-options button.active"))
+      .map(button => button.dataset.value);
 
-  if (!selected.length) {
-    resultBox.style.display = "block";
-    resultBox.innerHTML = `
+    if (!selected.length) {
+      experienceResult.style.display = "block";
+      experienceResult.innerHTML = `
+        <div class="experience-result-card">
+          <h3>Choose a few options first</h3>
+          <p>Select what brings you here, what you enjoy and how you want to spend your time.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const wantsWedding = selected.includes("wedding");
+
+    const results = experiences
+      .filter(experience => {
+        if (experience.name === "Wedding Show Round") {
+          return wantsWedding;
+        }
+
+        return true;
+      })
+      .map(experience => {
+        const matches = experience.tags.filter(tag => selected.includes(tag));
+        const matchRatio = matches.length / selected.length;
+        const score = Math.round((matchRatio * 85) + experience.popularity);
+
+        return {
+          ...experience,
+          matches,
+          finalScore: Math.min(score, 99)
+        };
+      })
+      .filter(experience => experience.matches.length > 0)
+      .sort((a, b) => b.finalScore - a.finalScore)
+      .slice(0, 3);
+
+    if (!results.length) {
+      experienceResult.style.display = "block";
+      experienceResult.innerHTML = `
+        <div class="experience-result-card">
+          <h3>No perfect match yet</h3>
+          <p>Try selecting a few broader options like wine, relaxed, food or day out.</p>
+        </div>
+      `;
+      return;
+    }
+
+    const best = results[0];
+    const others = results.slice(1);
+
+    experienceResult.style.display = "block";
+
+    experienceResult.innerHTML = `
       <div class="experience-result-card">
-        <h3>Choose a few options first</h3>
-        <p>Select what brings you here, what you enjoy and how you want to spend your time.</p>
+        <p><strong>${best.badge}</strong></p>
+
+        <h3>${best.name}</h3>
+
+        <p class="experience-score">${best.finalScore}% Match</p>
+
+        <p>${best.description}</p>
+
+        <div class="experience-detail-grid">
+          <div>
+            <strong>Best for</strong>
+            <span>${best.bestFor}</span>
+          </div>
+
+          <div>
+            <strong>Recommended add on</strong>
+            <span>${best.addon}</span>
+          </div>
+        </div>
+
+        <h3>Why we picked this</h3>
+
+        <ul>
+          ${best.reasons.map(reason => `<li>${reason}</li>`).join("")}
+        </ul>
+
+        <a href="${best.link}" target="_blank" rel="noopener noreferrer">
+          ${best.cta} →
+        </a>
       </div>
+
+      ${
+        others.length
+          ? `
+            <div class="experience-other-matches">
+              <h3>You might also enjoy</h3>
+
+              <div class="experience-mini-grid">
+                ${others.map(item => `
+                  <article class="experience-mini-card">
+                    <p><strong>${item.badge}</strong></p>
+                    <h3>${item.name}</h3>
+                    <p>${item.finalScore}% Match</p>
+                    <p>${item.bestFor}</p>
+                    <a href="${item.link}" target="_blank" rel="noopener noreferrer">
+                      ${item.cta} →
+                    </a>
+                  </article>
+                `).join("")}
+              </div>
+            </div>
+          `
+          : ""
+      }
     `;
-    return;
-  }
-const wantsWedding = selected.includes("wedding");
-const results = experiences
-  .filter(experience => {
-    if (experience.name === "Wedding Show Round") {
-      return wantsWedding;
-    }
+  });
+}
 
-    return true;
-  })
-  .map(experience => {
-    const matches = experience.tags.filter(tag => selected.includes(tag));
-    const matchRatio = matches.length / selected.length;
-    const score = Math.round((matchRatio * 85) + experience.score);
+const clearExperienceButton = document.getElementById("clearExperienceButton");
 
-    return {
-      ...experience,
-      matches,
-      finalScore: Math.min(score, 99)
-    };
-  })
-  .filter(experience => experience.finalScore > experience.score)
-  .sort((a, b) => b.finalScore - a.finalScore);
-
-  const best = results[0];
-
-  resultBox.style.display = "block";
-
-  resultBox.innerHTML = `
-    <div class="experience-result-card">
-      <p><strong>${best.badge}</strong></p>
-
-      <h3>${best.name}</h3>
-
-      <p><strong>${best.finalScore}% Match</strong></p>
-
-      <p>${best.description}</p>
-
-      <h3>Why we picked this</h3>
-
-      <ul>
-        ${best.reasons.map(reason => `<li>${reason}</li>`).join("")}
-      </ul>
-
-      <p><strong>Recommended add on:</strong> ${best.addon}</p>
-
-      <a href="${best.link}" target="_blank" rel="noopener noreferrer">
-        Book this experience →
-      </a>
-    </div>
-  `;
-});
-const clearExplorerButton = document.getElementById("clearExplorerFilters");
-
-if (clearExplorerButton) {
-  clearExplorerButton.addEventListener("click", () => {
-    currentCategory = null;
-
+if (clearExperienceButton) {
+  clearExperienceButton.addEventListener("click", () => {
     document
-      .querySelectorAll(".explorer-tab")
-      .forEach(tab => tab.classList.remove("active"));
+      .querySelectorAll(".experience-options button")
+      .forEach(button => button.classList.remove("active"));
 
-    const explorerSearch = document.getElementById("explorerSearch");
-
-    if (explorerSearch) {
-      explorerSearch.value = "";
+    if (experienceResult) {
+      experienceResult.style.display = "none";
+      experienceResult.innerHTML = "";
     }
-
-    explorerGrid.innerHTML = `
-      <div class="explorer-empty">
-        <h3>Choose a category to start exploring</h3>
-        <p>Find pubs, restaurants, breweries, walks, towns, family days out and local experiences near Stanlake Park.</p>
-      </div>
-    `;
   });
 }
 const clearExperienceButton = document.getElementById("clearExperienceButton");
