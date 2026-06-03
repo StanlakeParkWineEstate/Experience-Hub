@@ -1713,40 +1713,14 @@ color:white;
   text-decoration: underline;
 
 }
-.final-cta{
-  background:#347a47;
-  color:white;
-  text-align:center;
-  padding:60px 40px;
-  border-radius:36px;
-  margin:80px 0;
+.final-cta {
+  padding: 40px;
 }
 
-.final-cta h2{
-  font-family:"Iowan Old Style", serif;
-  font-size:clamp(2rem,4vw,4rem);
-  line-height:1.1;
-  margin-bottom:16px;
+.final-cta h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
 }
 
-.final-cta p{
-  font-size:1.1rem;
-  opacity:0.9;
-  margin-bottom:30px;
-}
-
-.final-cta-button{
-  display:inline-block;
-  background:white;
-  color:#347a47;
-  padding:16px 32px;
-  border-radius:999px;
-  font-weight:700;
-  text-decoration:none;
-}
-
-.final-cta-stats{
-  margin-top:30px;
-  font-size:1rem;
-  opacity:0.85;
+.final-cta-button {
+  margin: 20px 0;
 }
