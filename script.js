@@ -873,3 +873,153 @@ document
   });
 
 });
+const experienceChoices = [];
+
+const experiences = [
+  {
+    name: "Wine Tour & Tasting",
+    badge: "🍷 Most Popular",
+    score: 8,
+    tags: ["day out", "wine", "vineyard", "winery", "learning", "unique"],
+    description: "Explore the vineyard and winery before tasting six wines with one of our friendly guides.",
+    reasons: ["You want the full Stanlake Park experience", "You are interested in wine", "You want to see the vineyard and winery"],
+    addon: "Stay for food or a glass of wine in the Wine Bar afterwards.",
+    link: "https://stanlakepark.com/wine-tours/"
+  },
+  {
+    name: "Cheese & Wine Tour",
+    badge: "🧀 Food Lover Favourite",
+    score: 6,
+    tags: ["food", "wine", "pairings", "day out", "date", "special occasion"],
+    description: "A guided vineyard and winery tour with cheese and wine pairings included.",
+    reasons: ["You enjoy food and wine together", "You want a more indulgent tour", "You are planning a date or special occasion"],
+    addon: "Make it a full afternoon with a drink in the Wine Bar.",
+    link: "https://stanlakepark.com/wine-tours/"
+  },
+  {
+    name: "Cheese & Wine Tasting",
+    badge: "🧀 Relaxed Tasting",
+    score: 4,
+    tags: ["food", "wine", "pairings", "relaxed"],
+    description: "A seated tasting experience pairing Stanlake Park wines with cheese.",
+    reasons: ["You want a relaxed tasting", "You love food pairings", "You do not need the full vineyard tour"],
+    addon: "Great before or after lunch nearby.",
+    link: "https://stanlakepark.com/wine-tastings/"
+  },
+  {
+    name: "Wine Tour & Cream Tea",
+    badge: "☕ Afternoon Treat",
+    score: 4,
+    tags: ["relaxed", "date", "special occasion", "vineyard", "day out"],
+    description: "Enjoy a vineyard tour and tasting followed by a cream tea.",
+    reasons: ["You want a slower afternoon", "You are planning something relaxed", "You like a classic countryside treat"],
+    addon: "Perfect for couples and relaxed celebrations.",
+    link: "https://stanlakepark.com/wine-tours/"
+  },
+  {
+    name: "Monthly Wine Tastings with Natalia",
+    badge: "🍷 Hosted by Natalia DipWSET",
+    score: 5,
+    tags: ["learning", "wine", "world wine", "unique", "friends"],
+    description: "Hosted by Natalia Pezzone DipWSET, these monthly tastings explore wine regions, grapes and styles from around the world.",
+    reasons: ["You enjoy learning about wine", "You want something different from a vineyard tour", "You are curious about wines from around the world"],
+    addon: "Ideal for returning visitors, WSET students and curious wine drinkers.",
+    link: "https://stanlakepark.com/events/"
+  },
+  {
+    name: "North Lodge Stay",
+    badge: "❤️ Romantic Stay",
+    score: 3,
+    tags: ["date", "weekend", "overnight", "relaxed", "special occasion"],
+    description: "A vineyard stay for two, perfect for a romantic getaway.",
+    reasons: ["You are planning a special visit", "You want to stay overnight", "You want something memorable"],
+    addon: "Add a Wine Tour & Tasting during your stay.",
+    link: "https://stanlakepark.com/accommodation/"
+  },
+  {
+    name: "South Lodge Stay",
+    badge: "🏡 Group Getaway",
+    score: 3,
+    tags: ["friends", "weekend", "overnight", "special occasion"],
+    description: "A spacious vineyard stay for friends, families and group getaways.",
+    reasons: ["You are bringing a group", "You want to stay overnight", "You are planning a celebration"],
+    addon: "Pair it with a group tasting or Wine Bar visit.",
+    link: "https://stanlakepark.com/accommodation/"
+  },
+  {
+    name: "Wedding Show Round",
+    badge: "💍 Wedding Planning",
+    score: 10,
+    tags: ["wedding", "special occasion", "unique"],
+    description: "Explore our vineyard wedding venue and see how your day could look.",
+    reasons: ["You are planning a wedding", "You love the estate setting", "You want something personal and memorable"],
+    addon: "Book a show round and explore the venue in person.",
+    link: "https://stanlakepark.com/weddings/"
+  }
+];
+
+document.querySelectorAll(".experience-options button").forEach(button => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("active");
+  });
+});
+
+document.getElementById("experienceMatchButton").addEventListener("click", () => {
+  const selected = Array.from(document.querySelectorAll(".experience-options button.active"))
+    .map(button => button.dataset.value);
+
+  const resultBox = document.getElementById("experienceResult");
+
+  if (!selected.length) {
+    resultBox.style.display = "block";
+    resultBox.innerHTML = `
+      <div class="experience-result-card">
+        <h3>Choose a few options first</h3>
+        <p>Select what brings you here, what you enjoy and how you want to spend your time.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const results = experiences
+    .map(experience => {
+      const matches = experience.tags.filter(tag => selected.includes(tag));
+      const score = matches.length * 18 + experience.score;
+
+      return {
+        ...experience,
+        matches,
+        finalScore: Math.min(score, 99)
+      };
+    })
+    .filter(experience => experience.finalScore > experience.score)
+    .sort((a, b) => b.finalScore - a.finalScore);
+
+  const best = results[0];
+
+  resultBox.style.display = "block";
+
+  resultBox.innerHTML = `
+    <div class="experience-result-card">
+      <p><strong>${best.badge}</strong></p>
+
+      <h3>${best.name}</h3>
+
+      <p><strong>${best.finalScore}% Match</strong></p>
+
+      <p>${best.description}</p>
+
+      <h3>Why we picked this</h3>
+
+      <ul>
+        ${best.reasons.map(reason => `<li>${reason}</li>`).join("")}
+      </ul>
+
+      <p><strong>Recommended add on:</strong> ${best.addon}</p>
+
+      <a href="${best.link}" target="_blank" rel="noopener noreferrer">
+        Book this experience →
+      </a>
+    </div>
+  `;
+});
