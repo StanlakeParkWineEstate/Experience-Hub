@@ -1918,3 +1918,26 @@ color:white;
 .experience-clear-button:hover {
   transform: translateY(-3px);
 }
+.experience-matcher {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-question {
+  text-align: center;
+}
+
+.experience-question h3 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.experience-options {
+  justify-content: center;
+}
+.experience-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
