@@ -1425,3 +1425,17 @@ color:white;
 .explorer-card a {
   pointer-events: auto;
 }
+.explorer-empty {
+  grid-column: 1 / -1;
+  padding: 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(32,25,22,0.10);
+  text-align: center;
+  color: var(--muted);
+}
+
+.explorer-empty h3 {
+  color: var(--ink);
+  margin-bottom: 8px;
+}
