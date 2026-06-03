@@ -1748,17 +1748,17 @@ color:white;
   font-family: "Iowan Old Style", serif;
   font-size: clamp(2rem, 3vw, 3.25rem);
   line-height: 1.1;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .final-cta p {
   font-size: 1.15rem;
   opacity: 0.9;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .final-cta-stats {
-  margin-top: 24px;
+  margin-top: 16px;
   font-size: 1rem;
   opacity: 0.85;
 }
