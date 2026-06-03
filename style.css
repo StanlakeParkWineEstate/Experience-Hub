@@ -1739,29 +1739,21 @@ color:white;
   background:#347a47;
   color:white;
   text-align:center;
-  padding:30px 40px;
+
+  padding:24px 40px;
+
   border-radius:36px;
   margin:80px 0;
 }
 
-.final-cta h2 {
-  font-family: "Iowan Old Style", serif;
-  font-size: clamp(2rem, 3vw, 3.25rem);
-  line-height: 1.1;
-  margin-bottom: 8px;
+.final-cta h2{
+  font-family:"Iowan Old Style", serif;
+  font-size:clamp(2rem,3vw,3rem);
+  line-height:1.1;
+
+  margin:0 0 18px 0;
 }
 
-.final-cta p {
-  font-size: 1.15rem;
-  opacity: 0.9;
-  margin-bottom: 16px;
-}
-
-.final-cta-stats {
-  margin-top: 16px;
-  font-size: 1rem;
-  opacity: 0.85;
-}
 .final-cta-button{
   display:inline-flex;
   align-items:center;
@@ -1773,14 +1765,16 @@ color:white;
   padding:16px 32px;
   border-radius:999px;
 
-  font-weight:700;
-  font-size:1.1rem;
-
   text-decoration:none;
+  font-weight:700;
 
-  box-shadow:0 8px 24px rgba(0,0,0,0.15);
+  margin:0;
+}
 
-  transition:all 0.25s ease;
+.final-cta-stats{
+  margin-top:18px;
+  font-size:1rem;
+  opacity:0.9;
 }
 
 .final-cta-button:hover{
