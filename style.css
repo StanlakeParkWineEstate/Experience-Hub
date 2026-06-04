@@ -336,11 +336,11 @@ h3 {
 }
 
 .action-card.wine {
-  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("http://stanlakepark.com/wp-content/uploads/Wine-Bar-ladies-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("http://stanlakepark.com/wp-content/uploads/stanlake-park-rose-pouring.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .action-card.visit {
-  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("http://stanlakepark.com/wp-content/uploads/Stanlake-Park-280325-114-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("http://stanlakepark.com/wp-content/uploads/Wine-Bar-ladies-scaled.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .action-card.estate {
@@ -348,7 +348,7 @@ h3 {
 }
 
 .action-card.nearby {
-  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("http://stanlakepark.com/wp-content/uploads/berkshire-thames-walks-drone-view.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
+  background: linear-gradient(rgba(63,93,55,0.15), rgba(63,93,55,0.45)), url("http://stanlakepark.com/wp-content/uploads/Winter-vineyard-walk-during-a-guided-wine-tour-near-London.jpg?auto=format&fit=crop&w=900&q=85") center/cover;
 }
 
 .feature-section {
