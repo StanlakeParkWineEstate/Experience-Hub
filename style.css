@@ -2038,8 +2038,16 @@ color:white;
 .experience-result-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  margin: 28px 0;
+  gap: 60px;
+  align-items: start;
+}
+
+.experience-result-columns > div {
+  align-self: start;
+}
+
+.experience-result-columns > div:last-child p {
+  margin-bottom: 18px;
 }
 
 .experience-why {
