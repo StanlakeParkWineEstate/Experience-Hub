@@ -1303,7 +1303,7 @@ if (clearExperienceButton) {
   });
 }
 const pageSections = document.querySelectorAll(
-  "#matcher, #experience-matcher, #nearby, #stay, #journeys, #estate"
+  "#matcher, #experience-matcher, #nearby, #stay, #journeys, #what-to-expect, #estate"
 );
 
 const navLinks = document.querySelectorAll(".nav a");
