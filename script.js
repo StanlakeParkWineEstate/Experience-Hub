@@ -1302,3 +1302,31 @@ if (clearExperienceButton) {
     }
   });
 }
+const pageSections = document.querySelectorAll(
+  "#matcher, #experience-matcher, #nearby, #stay, #journeys, #estate"
+);
+
+const navLinks = document.querySelectorAll(".nav a");
+
+function updateActiveNav() {
+  let currentSection = "";
+
+  pageSections.forEach(section => {
+    const sectionTop = section.offsetTop - 180;
+
+    if (window.scrollY >= sectionTop) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("load", updateActiveNav);
