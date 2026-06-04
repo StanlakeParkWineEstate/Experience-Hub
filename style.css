@@ -2244,3 +2244,15 @@ color:white;
   color: #2f6f44;
   font-weight: 800;
 }
+.stay-card {
+  transition: all 0.35s ease;
+}
+
+.stay-card.recommended {
+  transform: scale(1.03);
+  z-index: 2;
+}
+
+.stay-card.not-recommended {
+  opacity: 0.75;
+}
