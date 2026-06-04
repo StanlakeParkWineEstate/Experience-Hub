@@ -2119,3 +2119,31 @@ color:white;
   width: auto;
   display: block;
 }
+.hero {
+  min-height: auto;
+  padding: 32px;
+}
+
+.hero-content {
+  padding: 60px 64px;
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 6vw, 6.5rem);
+}
+
+.hero-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hero-steps span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #f4f0e8;
+  color: #2f6f44;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
