@@ -881,6 +881,12 @@ const experiences = [
     badge: "🍷 Most Popular",
     image: "wine-tour.jpg",
     bestFor: "First time visitors",
+      includes: [
+    "Vineyard walk",
+    "Winery tour",
+    "Six wine tastings",
+    "Expert guide"
+  ],
     tags: ["day out", "wine", "vineyard", "winery", "learning", "unique", "relaxed"],
     popularity: 12,
     description: "Explore the vineyard and winery before tasting six wines with one of our friendly guides.",
@@ -898,6 +904,12 @@ const experiences = [
     badge: "🧀 Food Lover Favourite",
     image: "cheese-wine-tour.jpg",
     bestFor: "Food lovers",
+    includes: [
+  "Vineyard walk",
+  "Winery tour",
+  "Wine tasting",
+  "Cheese pairings"
+],
     tags: ["food", "wine", "pairings", "day out", "date", "special occasion", "gift", "relaxed"],
     popularity: 10,
     description: "A guided vineyard and winery tour with cheese and wine pairings included.",
@@ -915,6 +927,12 @@ const experiences = [
     badge: "🧀 Relaxed Tasting",
     image: "cheese-wine-tasting.jpg",
     bestFor: "A shorter seated tasting",
+    includes: [
+  "Guided tasting",
+  "Cheese pairings",
+  "Seated experience",
+  "Wine expert host"
+],
     tags: ["food", "wine", "pairings", "relaxed", "gift"],
     popularity: 7,
     description: "A seated tasting experience pairing Stanlake Park wines with cheese.",
@@ -932,6 +950,12 @@ const experiences = [
     badge: "☕ Afternoon Treat",
     image: "cream-tea-tour.jpg",
     bestFor: "A relaxed afternoon",
+    includes: [
+  "Vineyard walk",
+  "Winery tour",
+  "Wine tasting",
+  "Cream tea"
+],
     tags: ["relaxed", "date", "special occasion", "vineyard", "day out", "gift"],
     popularity: 7,
     description: "Enjoy a vineyard tour and tasting followed by a cream tea.",
@@ -949,6 +973,12 @@ const experiences = [
     badge: "🍷 Hosted by Natalia DipWSET",
     image: "monthly-wine-tasting.jpg",
     bestFor: "Curious wine drinkers",
+    includes: [
+  "Hosted by Natalia DipWSET",
+  "World wine theme",
+  "Guided tasting",
+  "Small group format"
+],
     tags: ["learning", "wine", "world wine", "unique", "friends"],
     popularity: 9,
     description: "Hosted by Natalia Pezzone DipWSET, these monthly tastings explore wine regions, grapes and styles from around the world.",
@@ -966,6 +996,12 @@ const experiences = [
     badge: "🍷 Flexible Visit",
     image: "wine-bar.jpg",
     bestFor: "Relaxed visits and groups",
+    includes: [
+  "Wine flights",
+  "Sharing boards",
+  "Local beers",
+  "Indoor and outdoor seating"
+],
     tags: ["day out", "relaxed", "friends", "food", "wine"],
     popularity: 8,
     description: "Drop into the Wine Bar for wine, local drinks, sharing boards and a relaxed vineyard setting.",
@@ -983,6 +1019,12 @@ const experiences = [
     badge: "❤️ Romantic Stay",
     image: "north-lodge.jpg",
     bestFor: "Couples and weekend breaks",
+    includes: [
+  "Sleeps 2",
+  "Private accommodation",
+  "Vineyard setting",
+  "Self catering"
+],
     tags: ["date", "weekend", "overnight", "relaxed", "special occasion"],
     popularity: 6,
     description: "A vineyard stay for two, perfect for a romantic getaway.",
@@ -1000,6 +1042,12 @@ const experiences = [
     badge: "🏡 Group Getaway",
     image: "south-lodge.jpg",
     bestFor: "Friends, families and groups",
+    includes: [
+  "Sleeps 8",
+  "Group accommodation",
+  "Large communal spaces",
+  "Vineyard setting"
+],
     tags: ["friends", "weekend", "overnight", "special occasion"],
     popularity: 5,
     description: "A spacious vineyard stay for friends, families and group getaways.",
@@ -1017,6 +1065,12 @@ const experiences = [
     badge: "🏡 Henley Escape",
     image: "old-school-house.jpg",
     bestFor: "Groups exploring Henley",
+    includes: [
+  "Sleeps up to 9",
+  "Henley location",
+  "Group friendly",
+  "Self catering"
+],
     tags: ["friends", "weekend", "overnight", "special occasion", "day out"],
     popularity: 5,
     description: "A characterful house in Henley on Thames, perfect for group getaways and exploring the town, river and surrounding countryside.",
@@ -1034,6 +1088,12 @@ const experiences = [
     badge: "💍 Wedding Planning",
     image: "wedding-showround.jpg",
     bestFor: "Engaged couples",
+    includes: [
+  "Venue tour",
+  "Wedding consultation",
+  "Explore ceremony spaces",
+  "See reception areas"
+],
     tags: ["wedding"],
     popularity: 20,
     description: "Explore our vineyard wedding venue and see how your day could look.",
@@ -1128,17 +1188,21 @@ if (experienceMatchButton) {
 
         <p class="experience-score">${best.finalScore}% Match</p>
 
-        <p>${best.description}</p>
+<p>${best.description}</p>
 
-        <div class="experience-detail-grid">
-          <div>
-            <strong>Best for</strong>
-            <span>${best.bestFor}</span>
-          </div>
+<div class="experience-includes">
+  <h4>Includes</h4>
 
-          <div>
-            <strong>Recommended add on</strong>
-            <span>${best.addon}</span>
+  <ul>
+    ${best.includes.map(item => `
+      <li>✓ ${item}</li>
+    `).join("")}
+  </ul>
+</div>
+
+<p><strong>Best for</strong> ${best.bestFor}</p>
+
+<p><strong>Recommended add on</strong> ${best.addon}</p>
           </div>
         </div>
 
