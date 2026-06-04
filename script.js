@@ -1109,7 +1109,7 @@ if (experienceMatchButton) {
         others.length
           ? `
             <div class="experience-other-matches">
-              <h3>You might also enjoy</h3>
+              <h3>Other good matches for you...</h3>
 
               <div class="experience-mini-grid">
                 ${others.map(item => `
