@@ -1404,6 +1404,11 @@ A romantic vineyard stay for two, perfect for turning your visit into a weekend 
   else {
     recommendation = "Browse all accommodation options below.";
   }
+const stayShowcase = document.querySelector(".stay-showcase");
+const recommendedCard = document.querySelector(".stay-card.recommended");
 
+if (stayShowcase && recommendedCard) {
+  stayShowcase.prepend(recommendedCard);
+}
   stayResult.innerHTML = recommendation;
 }
