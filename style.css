@@ -2114,3 +2114,8 @@ color:white;
 .nav a {
   transition: all 0.25s ease;
 }
+.header-logo {
+  height: 56px;
+  width: auto;
+  display: block;
+}
