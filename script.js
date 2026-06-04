@@ -879,6 +879,7 @@ const experiences = [
   {
     name: "Wine Tour & Tasting",
     badge: "🍷 Most Popular",
+    image: "wine-tour.jpg",
     bestFor: "First time visitors",
     tags: ["day out", "wine", "vineyard", "winery", "learning", "unique", "relaxed"],
     popularity: 12,
@@ -895,6 +896,7 @@ const experiences = [
   {
     name: "Cheese & Wine Tour",
     badge: "🧀 Food Lover Favourite",
+    image: "cheese-wine-tour.jpg",
     bestFor: "Food lovers",
     tags: ["food", "wine", "pairings", "day out", "date", "special occasion", "gift", "relaxed"],
     popularity: 10,
@@ -911,6 +913,7 @@ const experiences = [
   {
     name: "Cheese & Wine Tasting",
     badge: "🧀 Relaxed Tasting",
+    image: "cheese-wine-tasting.jpg",
     bestFor: "A shorter seated tasting",
     tags: ["food", "wine", "pairings", "relaxed", "gift"],
     popularity: 7,
@@ -927,6 +930,7 @@ const experiences = [
   {
     name: "Wine Tour & Cream Tea",
     badge: "☕ Afternoon Treat",
+    image: "cream-tea-tour.jpg",
     bestFor: "A relaxed afternoon",
     tags: ["relaxed", "date", "special occasion", "vineyard", "day out", "gift"],
     popularity: 7,
@@ -943,6 +947,7 @@ const experiences = [
   {
     name: "Monthly Wine Tastings with Natalia",
     badge: "🍷 Hosted by Natalia DipWSET",
+    image: "monthly-wine-tasting.jpg",
     bestFor: "Curious wine drinkers",
     tags: ["learning", "wine", "world wine", "unique", "friends"],
     popularity: 9,
@@ -957,8 +962,26 @@ const experiences = [
     cta: "View Upcoming Tastings"
   },
   {
+    name: "Wine Bar Visit",
+    badge: "🍷 Flexible Visit",
+    image: "wine-bar.jpg",
+    bestFor: "Relaxed visits and groups",
+    tags: ["day out", "relaxed", "friends", "food", "wine"],
+    popularity: 8,
+    description: "Drop into the Wine Bar for wine, local drinks, sharing boards and a relaxed vineyard setting.",
+    reasons: [
+      "You want something flexible",
+      "You are visiting with friends",
+      "You would like food and drinks without booking a full tour"
+    ],
+    addon: "Try a wine flight or sharing board while you are here.",
+    link: "https://stanlakepark.com/wine-bar/",
+    cta: "Explore the Wine Bar"
+  },
+  {
     name: "North Lodge Stay",
     badge: "❤️ Romantic Stay",
+    image: "north-lodge.jpg",
     bestFor: "Couples and weekend breaks",
     tags: ["date", "weekend", "overnight", "relaxed", "special occasion"],
     popularity: 6,
@@ -970,11 +993,12 @@ const experiences = [
     ],
     addon: "Add a Wine Tour & Tasting during your stay.",
     link: "https://stanlakepark.com/accommodation/",
-    cta: "Explore Stays"
+    cta: "Explore North Lodge"
   },
   {
     name: "South Lodge Stay",
     badge: "🏡 Group Getaway",
+    image: "south-lodge.jpg",
     bestFor: "Friends, families and groups",
     tags: ["friends", "weekend", "overnight", "special occasion"],
     popularity: 5,
@@ -986,11 +1010,29 @@ const experiences = [
     ],
     addon: "Pair it with a group tasting or Wine Bar visit.",
     link: "https://stanlakepark.com/accommodation/",
-    cta: "Explore Group Stays"
+    cta: "Explore South Lodge"
+  },
+  {
+    name: "Old School House",
+    badge: "🏡 Henley Escape",
+    image: "old-school-house.jpg",
+    bestFor: "Groups exploring Henley",
+    tags: ["friends", "weekend", "overnight", "special occasion", "day out"],
+    popularity: 5,
+    description: "A characterful house in Henley on Thames, perfect for group getaways and exploring the town, river and surrounding countryside.",
+    reasons: [
+      "You are planning a group getaway",
+      "You want to explore Henley",
+      "You want more space for family or friends"
+    ],
+    addon: "Pair your stay with a Stanlake Park Wine Tour or Wine Bar visit.",
+    link: "https://stanlakepark.com/accommodation/",
+    cta: "Explore Old School House"
   },
   {
     name: "Wedding Show Round",
     badge: "💍 Wedding Planning",
+    image: "wedding-showround.jpg",
     bestFor: "Engaged couples",
     tags: ["wedding"],
     popularity: 20,
@@ -1073,8 +1115,14 @@ if (experienceMatchButton) {
     experienceResult.style.display = "block";
 
     experienceResult.innerHTML = `
-      <div class="experience-result-card">
-        <p><strong>${best.badge}</strong></p>
+<div class="experience-result-card">
+  <img
+    src="${best.image}"
+    alt="${best.name}"
+    class="experience-result-image"
+  >
+
+  <p><strong>${best.badge}</strong></p>
 
         <h3>${best.name}</h3>
 
@@ -1113,8 +1161,14 @@ if (experienceMatchButton) {
 
               <div class="experience-mini-grid">
                 ${others.map(item => `
-                  <article class="experience-mini-card">
-                    <p><strong>${item.badge}</strong></p>
+<article class="experience-mini-card">
+  <img
+    src="${item.image}"
+    alt="${item.name}"
+    class="experience-mini-image"
+  >
+
+  <p><strong>${item.badge}</strong></p>
                     <h3>${item.name}</h3>
                     <p>${item.finalScore}% Match</p>
                     <p>${item.bestFor}</p>
