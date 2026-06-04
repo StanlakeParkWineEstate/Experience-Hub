@@ -2357,3 +2357,22 @@ color:white;
     gap: 40px;
   }
 }
+.footer-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #2f6f44;
+  padding: 16px 32px;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 24px;
+  transition: all 0.25s ease;
+}
+
+.footer-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
