@@ -2009,3 +2009,25 @@ color:white;
   margin-bottom: 8px;
   opacity: 0.95;
 }
+.gift-voucher-callout {
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.16);
+}
+
+.gift-voucher-callout h3 {
+  margin: 0 0 8px;
+  color: white;
+}
+
+.gift-voucher-callout p {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,0.86);
+}
+
+.gift-voucher-callout a {
+  background: white;
+  color: #2f6f44;
+}
