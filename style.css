@@ -703,7 +703,6 @@ h3 {
 
 .stay-showcase {
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr 0.9fr;
   gap: 14px;
 }
 
