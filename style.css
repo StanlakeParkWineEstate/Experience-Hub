@@ -363,16 +363,18 @@ h3 {
   box-shadow: 0 24px 50px rgba(0,0,0,0.18);
   filter: brightness(1.03);
 }
-.action-card:hover h3 {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-.action-card img {
-  transition: transform 0.4s ease;
+.action-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+  cursor: pointer;
 }
 
-.action-card:hover img {
-  transform: scale(1.03);
+.action-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 50px rgba(0,0,0,0.18);
+  filter: brightness(1.03);
 }
 
 .feature-section {
