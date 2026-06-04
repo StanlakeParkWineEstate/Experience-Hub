@@ -2106,3 +2106,11 @@ color:white;
   padding-top: 0 !important;
   margin-top: 0 !important;
 }
+.nav a.active {
+  background: #2f6f44;
+  color: #ffffff;
+}
+
+.nav a {
+  transition: all 0.25s ease;
+}
