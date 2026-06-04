@@ -179,6 +179,9 @@ a {
   background: rgba(255,255,255,0.13);
   backdrop-filter: blur(16px);
 }
+.hero-badge {
+  display: none;
+}
 
 .hero-badge span {
   font-size: 2rem;
