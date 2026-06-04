@@ -2246,11 +2246,25 @@ color:white;
 }
 .stay-card {
   transition: all 0.35s ease;
+  position: relative;
 }
 
 .stay-card.recommended {
   outline: 4px solid #2f6f44;
   transform: translateY(-8px);
+}
+
+.stay-card.recommended::before {
+  content: "⭐ Recommended";
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #2f6f44;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .stay-card.not-recommended {
