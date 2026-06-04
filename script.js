@@ -1144,15 +1144,23 @@ if (experienceMatchButton) {
         return true;
       })
       .map(experience => {
-        const matches = experience.tags.filter(tag => selected.includes(tag));
-        const matchRatio = matches.length / selected.length;
-        const score = Math.round((matchRatio * 85) + experience.popularity);
+const matches = experience.tags.filter(tag => selected.includes(tag));
+
+let score = 0;
+
+if (matches.length === selected.length) {
+  score = 100;
+} else {
+  const matchRatio = matches.length / selected.length;
+  score = Math.round(matchRatio * 90) + experience.popularity;
+}
+
+score = Math.min(score, 100);
 
         return {
           ...experience,
           matches,
-          finalScore: Math.min(score, 99)
-        };
+finalScore: score        };
       })
       .filter(experience => experience.matches.length > 0)
       .sort((a, b) => b.finalScore - a.finalScore)
