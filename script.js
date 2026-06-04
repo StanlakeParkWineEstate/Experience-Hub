@@ -1125,80 +1125,134 @@ if (experienceMatchButton) {
     if (!selected.length) {
       experienceResult.style.display = "block";
       experienceResult.innerHTML = `
-       <div class="experience-result-card">
-
-  <img
-    src="${best.image}"
-    alt="${best.name}"
-    class="experience-result-image"
-  >
-
-  <div class="experience-result-content">
-
-    <p><strong>${best.badge}</strong></p>
-
-    <h3>${best.name}</h3>
-
-    <p class="experience-score">${best.finalScore}% Match</p>
-
-    <p>${best.description}</p>
-
-    <div class="experience-result-columns">
-
-      <div>
-        <div class="experience-includes">
-          <h4>Includes</h4>
-
-          <ul>
-            ${best.includes.map(item => `
-              <li>✓ ${item}</li>
-            `).join("")}
-          </ul>
+        <div class="experience-result-card">
+          <h3>Choose a few options first</h3>
+          <p>Select what brings you here, what you enjoy and how you want to spend your time.</p>
         </div>
-      </div>
+      `;
+      return;
+    }
 
-      <div>
-        <p><strong>Best for</strong><br>${best.bestFor}</p>
+    const wantsWedding = selected.includes("wedding");
+    const wantsGift = selected.includes("gift");
 
-        <p><strong>Recommended add on</strong><br>${best.addon}</p>
-      </div>
+    const results = experiences
+      .filter(experience => {
+        if (experience.name === "Wedding Show Round") {
+          return wantsWedding;
+        }
+        return true;
+      })
+      .map(experience => {
+        const matches = experience.tags.filter(tag => selected.includes(tag));
+        const matchRatio = matches.length / selected.length;
 
-    </div>
+        let score = Math.round(matchRatio * 90) + experience.popularity;
 
-    <div class="experience-why">
-      <h3>Why we picked this</h3>
+        if (matchRatio >= 0.75) {
+          score += 10;
+        }
 
-      <ul>
-        ${best.reasons.map(reason => `<li>${reason}</li>`).join("")}
-      </ul>
-    </div>
+        score = Math.min(score, 100);
 
-    <div class="experience-result-actions">
+        return {
+          ...experience,
+          matches,
+          finalScore: score
+        };
+      })
+      .filter(experience => experience.matches.length > 0)
+      .sort((a, b) => b.finalScore - a.finalScore)
+      .slice(0, 3);
 
-      <a href="${best.link}" target="_blank" rel="noopener noreferrer">
-        ${best.cta} →
-      </a>
+    if (!results.length) {
+      experienceResult.style.display = "block";
+      experienceResult.innerHTML = `
+        <div class="experience-result-card">
+          <h3>No perfect match yet</h3>
+          <p>Try selecting a few broader options like wine, relaxed, food or day out.</p>
+        </div>
+      `;
+      return;
+    }
 
-      ${
-        wantsGift
-          ? `
-            <a
-              href="https://stanlakepark.com/product-category/gift-vouchers/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="gift-voucher-button"
-            >
-              View Gift Vouchers →
+    const best = results[0];
+    const others = results.slice(1);
+
+    experienceResult.style.display = "block";
+
+    experienceResult.innerHTML = `
+      <div class="experience-result-card">
+
+        <img
+          src="${best.image}"
+          alt="${best.name}"
+          class="experience-result-image"
+        >
+
+        <div class="experience-result-content">
+
+          <p><strong>${best.badge}</strong></p>
+
+          <h3>${best.name}</h3>
+
+          <p class="experience-score">${best.finalScore}% Match</p>
+
+          <p>${best.description}</p>
+
+          <div class="experience-result-columns">
+
+            <div class="experience-includes">
+              <h4>Includes</h4>
+
+              <ul>
+                ${best.includes.map(item => `
+                  <li>✓ ${item}</li>
+                `).join("")}
+              </ul>
+            </div>
+
+            <div>
+              <p><strong>Best for</strong><br>${best.bestFor}</p>
+              <p><strong>Recommended add on</strong><br>${best.addon}</p>
+            </div>
+
+          </div>
+
+          <div class="experience-why">
+            <h3>Why we picked this</h3>
+
+            <ul>
+              ${best.reasons.map(reason => `<li>${reason}</li>`).join("")}
+            </ul>
+          </div>
+
+          <div class="experience-result-actions">
+
+            <a href="${best.link}" target="_blank" rel="noopener noreferrer">
+              ${best.cta} →
             </a>
-          `
-          : ""
-      }
 
-    </div>
+            ${
+              wantsGift
+                ? `
+                  <a
+                    href="https://stanlakepark.com/product-category/gift-vouchers/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="gift-voucher-button"
+                  >
+                    View Gift Vouchers →
+                  </a>
+                `
+                : ""
+            }
 
-  </div>
+          </div>
 
-</div>
+        </div>
+
+      </div>
 
       ${
         others.length
@@ -1208,17 +1262,18 @@ if (experienceMatchButton) {
 
               <div class="experience-mini-grid">
                 ${others.map(item => `
-<article class="experience-mini-card">
-  <img
-    src="${item.image}"
-    alt="${item.name}"
-    class="experience-mini-image"
-  >
+                  <article class="experience-mini-card">
+                    <img
+                      src="${item.image}"
+                      alt="${item.name}"
+                      class="experience-mini-image"
+                    >
 
-  <p><strong>${item.badge}</strong></p>
+                    <p><strong>${item.badge}</strong></p>
                     <h3>${item.name}</h3>
                     <p>${item.finalScore}% Match</p>
                     <p>${item.bestFor}</p>
+
                     <a href="${item.link}" target="_blank" rel="noopener noreferrer">
                       ${item.cta} →
                     </a>
