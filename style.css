@@ -2090,3 +2090,19 @@ color:white;
 .experience-result-columns > div:last-child {
   margin-top: 0;
 }
+.experience-result-columns {
+  align-items: start !important;
+}
+
+.experience-result-columns > div {
+  align-self: start !important;
+}
+
+.experience-includes {
+  margin: 0 !important;
+}
+
+.experience-result-columns > div:last-child {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
