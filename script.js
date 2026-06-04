@@ -1330,3 +1330,63 @@ function updateActiveNav() {
 
 window.addEventListener("scroll", updateActiveNav);
 window.addEventListener("load", updateActiveNav);
+let selectedSize = null;
+let selectedLocation = null;
+
+const stayResult = document.getElementById("stay-result");
+
+document.querySelectorAll("#party-size button").forEach(button => {
+  button.addEventListener("click", () => {
+
+    document.querySelectorAll("#party-size button")
+      .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    selectedSize = button.dataset.size;
+
+    updateStayRecommendation();
+  });
+});
+
+document.querySelectorAll("#stay-location button").forEach(button => {
+  button.addEventListener("click", () => {
+
+    document.querySelectorAll("#stay-location button")
+      .forEach(btn => btn.classList.remove("active"));
+
+    button.classList.add("active");
+
+    selectedLocation = button.dataset.location;
+
+    updateStayRecommendation();
+  });
+});
+
+function updateStayRecommendation() {
+
+  if (!selectedSize || !selectedLocation) return;
+
+  let recommendation = "";
+
+  if (selectedSize === "2" && selectedLocation === "vineyard") {
+    recommendation = "⭐ Recommended: North Lodge — perfect for couples staying on the vineyard.";
+  }
+
+  else if (
+    (selectedSize === "3-5" || selectedSize === "6-9")
+    && selectedLocation === "vineyard"
+  ) {
+    recommendation = "⭐ Recommended: South Lodge — ideal for families and groups on the vineyard.";
+  }
+
+  else if (selectedLocation === "henley") {
+    recommendation = "⭐ Recommended: Old School House — a characterful Henley stay for larger groups.";
+  }
+
+  else {
+    recommendation = "Browse all accommodation options below.";
+  }
+
+  stayResult.innerHTML = recommendation;
+}
