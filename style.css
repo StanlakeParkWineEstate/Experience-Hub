@@ -2248,25 +2248,34 @@ color:white;
   transition: all 0.35s ease;
   position: relative;
 }
+.stay-showcase {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 24px;
+}
+
+.stay-card {
+  transition: all 0.35s ease;
+  position: relative;
+  min-height: 540px;
+}
 
 .stay-card.recommended {
   outline: 4px solid #2f6f44;
   transform: translateY(-8px);
-}
-
-.stay-card.recommended::before {
-  content: "⭐ Recommended";
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background: #2f6f44;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 700;
+  z-index: 2;
 }
 
 .stay-card.not-recommended {
-  opacity: 0.8;
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .stay-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .stay-card {
+    min-height: 520px;
+  }
 }
