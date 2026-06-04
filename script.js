@@ -1364,7 +1364,42 @@ document.querySelectorAll("#stay-location button").forEach(button => {
 });
 
 function updateStayRecommendation() {
+document.querySelectorAll(".stay-card").forEach(card => {
+  card.classList.remove("recommended", "not-recommended");
+});
+  if (selectedSize === "2" && selectedLocation === "vineyard") {
 
+  recommendation =
+    "⭐ Recommended: North Lodge — perfect for couples staying on the vineyard.";
+
+  document
+    .getElementById("north-lodge")
+    .classList.add("recommended");
+
+}
+  else if (
+  (selectedSize === "3-5" || selectedSize === "6-9")
+  && selectedLocation === "vineyard"
+) {
+
+  recommendation =
+    "⭐ Recommended: South Lodge — ideal for families and groups on the vineyard.";
+
+  document
+    .getElementById("south-lodge")
+    .classList.add("recommended");
+
+}
+  else if (selectedLocation === "henley") {
+
+  recommendation =
+    "⭐ Recommended: Old School House — a characterful Henley stay for larger groups.";
+
+  document
+    .getElementById("old-school-house")
+    .classList.add("recommended");
+
+}
   if (!selectedSize || !selectedLocation) return;
 
   let recommendation = "";
