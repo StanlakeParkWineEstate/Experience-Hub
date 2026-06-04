@@ -1134,6 +1134,7 @@ if (experienceMatchButton) {
     }
 
     const wantsWedding = selected.includes("wedding");
+    const wantsGift = selected.includes("gift");
 
     const results = experiences
       .filter(experience => {
@@ -1223,6 +1224,23 @@ finalScore: score        };
         <a href="${best.link}" target="_blank" rel="noopener noreferrer">
           ${best.cta} →
         </a>
+        ${
+  wantsGift
+    ? `
+      <div class="gift-voucher-callout">
+        <h3>Buying as a gift?</h3>
+        <p>Our wine experiences make thoughtful gifts for birthdays, anniversaries and special occasions.</p>
+        <a
+          href="https://stanlakepark.com/product-category/gift-vouchers/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Gift Vouchers →
+        </a>
+      </div>
+    `
+    : ""
+}
       </div>
 
       ${
