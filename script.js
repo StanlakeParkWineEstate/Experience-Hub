@@ -1369,46 +1369,31 @@ function updateStayRecommendation() {
   let recommendation = "";
 
   document.querySelectorAll(".stay-card").forEach(card => {
-    card.classList.remove("recommended", "not-recommended");
+    card.classList.remove("recommended");
   });
 
   if (selectedSize === "2" && selectedLocation === "vineyard") {
-    recommendation = "⭐ We think you'll love North Lodge
-
-A romantic vineyard stay for two, perfect for turning your visit into a weekend away.";
-
-    document
-      .getElementById("north-lodge")
-      .classList.add("recommended");
-  }
-
-  else if (
-    (selectedSize === "3-5" || selectedSize === "6-9")
-    && selectedLocation === "vineyard"
+    recommendation = "⭐ We think you'll love North Lodge — a romantic vineyard stay for two.";
+    document.getElementById("north-lodge").classList.add("recommended");
+  } else if (
+    (selectedSize === "3-5" || selectedSize === "6-9") &&
+    selectedLocation === "vineyard"
   ) {
-    recommendation = "⭐ Recommended: South Lodge — ideal for families and groups on the vineyard.";
-
-    document
-      .getElementById("south-lodge")
-      .classList.add("recommended");
-  }
-
-  else if (selectedLocation === "henley") {
-    recommendation = "⭐ Recommended: Old School House — a characterful Henley stay for larger groups.";
-
-    document
-      .getElementById("old-school-house")
-      .classList.add("recommended");
-  }
-
-  else {
+    recommendation = "⭐ We think you'll love South Lodge — ideal for families and groups on the vineyard.";
+    document.getElementById("south-lodge").classList.add("recommended");
+  } else if (selectedLocation === "henley") {
+    recommendation = "⭐ We think you'll love Old School House — a characterful Henley stay for larger groups.";
+    document.getElementById("old-school-house").classList.add("recommended");
+  } else {
     recommendation = "Browse all accommodation options below.";
   }
-const stayShowcase = document.querySelector(".stay-showcase");
-const recommendedCard = document.querySelector(".stay-card.recommended");
 
-if (stayShowcase && recommendedCard) {
-  stayShowcase.prepend(recommendedCard);
-}
+  const stayShowcase = document.querySelector(".stay-showcase");
+  const recommendedCard = document.querySelector(".stay-card.recommended");
+
+  if (stayShowcase && recommendedCard) {
+    stayShowcase.prepend(recommendedCard);
+  }
+
   stayResult.innerHTML = recommendation;
 }
