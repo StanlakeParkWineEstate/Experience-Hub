@@ -1125,123 +1125,80 @@ if (experienceMatchButton) {
     if (!selected.length) {
       experienceResult.style.display = "block";
       experienceResult.innerHTML = `
-        <div class="experience-result-card">
-          <h3>Choose a few options first</h3>
-          <p>Select what brings you here, what you enjoy and how you want to spend your time.</p>
-        </div>
-      `;
-      return;
-    }
+       <div class="experience-result-card">
 
-    const wantsWedding = selected.includes("wedding");
-    const wantsGift = selected.includes("gift");
-
-    const results = experiences
-      .filter(experience => {
-        if (experience.name === "Wedding Show Round") {
-          return wantsWedding;
-        }
-
-        return true;
-      })
-      .map(experience => {
-const matches = experience.tags.filter(tag => selected.includes(tag));
-
-let score = 0;
-
-if (matches.length === selected.length) {
-  score = 100;
-} else {
-  const matchRatio = matches.length / selected.length;
-  score = Math.round(matchRatio * 90) + experience.popularity;
-}
-
-score = Math.min(score, 100);
-
-        return {
-          ...experience,
-          matches,
-finalScore: score        };
-      })
-      .filter(experience => experience.matches.length > 0)
-      .sort((a, b) => b.finalScore - a.finalScore)
-      .slice(0, 3);
-
-    if (!results.length) {
-      experienceResult.style.display = "block";
-      experienceResult.innerHTML = `
-        <div class="experience-result-card">
-          <h3>No perfect match yet</h3>
-          <p>Try selecting a few broader options like wine, relaxed, food or day out.</p>
-        </div>
-      `;
-      return;
-    }
-
-    const best = results[0];
-    const others = results.slice(1);
-
-    experienceResult.style.display = "block";
-
-    experienceResult.innerHTML = `
-<div class="experience-result-card">
   <img
     src="${best.image}"
     alt="${best.name}"
     class="experience-result-image"
   >
 
-  <p><strong>${best.badge}</strong></p>
+  <div class="experience-result-content">
 
-        <h3>${best.name}</h3>
+    <p><strong>${best.badge}</strong></p>
 
-        <p class="experience-score">${best.finalScore}% Match</p>
+    <h3>${best.name}</h3>
 
-<p>${best.description}</p>
+    <p class="experience-score">${best.finalScore}% Match</p>
 
-<div class="experience-includes">
-  <h4>Includes</h4>
+    <p>${best.description}</p>
 
-  <ul>
-    ${best.includes.map(item => `
-      <li>✓ ${item}</li>
-    `).join("")}
-  </ul>
-</div>
+    <div class="experience-result-columns">
 
-<p><strong>Best for</strong> ${best.bestFor}</p>
+      <div>
+        <div class="experience-includes">
+          <h4>Includes</h4>
 
-<p><strong>Recommended add on</strong> ${best.addon}</p>
-          </div>
+          <ul>
+            ${best.includes.map(item => `
+              <li>✓ ${item}</li>
+            `).join("")}
+          </ul>
         </div>
-
-        <h3>Why we picked this</h3>
-
-        <ul>
-          ${best.reasons.map(reason => `<li>${reason}</li>`).join("")}
-        </ul>
-
-        <a href="${best.link}" target="_blank" rel="noopener noreferrer">
-          ${best.cta} →
-        </a>
-        ${
-  wantsGift
-    ? `
-      <div class="gift-voucher-callout">
-        <h3>Buying as a gift?</h3>
-        <p>Our wine experiences make thoughtful gifts for birthdays, anniversaries and special occasions.</p>
-        <a
-          href="https://stanlakepark.com/product-category/gift-vouchers/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Gift Vouchers →
-        </a>
       </div>
-    `
-    : ""
-}
+
+      <div>
+        <p><strong>Best for</strong><br>${best.bestFor}</p>
+
+        <p><strong>Recommended add on</strong><br>${best.addon}</p>
       </div>
+
+    </div>
+
+    <div class="experience-why">
+      <h3>Why we picked this</h3>
+
+      <ul>
+        ${best.reasons.map(reason => `<li>${reason}</li>`).join("")}
+      </ul>
+    </div>
+
+    <div class="experience-result-actions">
+
+      <a href="${best.link}" target="_blank" rel="noopener noreferrer">
+        ${best.cta} →
+      </a>
+
+      ${
+        wantsGift
+          ? `
+            <a
+              href="https://stanlakepark.com/product-category/gift-vouchers/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="gift-voucher-button"
+            >
+              View Gift Vouchers →
+            </a>
+          `
+          : ""
+      }
+
+    </div>
+
+  </div>
+
+</div>
 
       ${
         others.length
