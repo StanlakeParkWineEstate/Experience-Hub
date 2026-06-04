@@ -2249,10 +2249,10 @@ color:white;
 }
 
 .stay-card.recommended {
-  transform: scale(1.03);
-  z-index: 2;
+  outline: 4px solid #2f6f44;
+  transform: translateY(-8px);
 }
 
 .stay-card.not-recommended {
-  opacity: 0.75;
+  opacity: 0.8;
 }
