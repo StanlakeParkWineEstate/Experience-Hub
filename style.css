@@ -2087,3 +2087,6 @@ color:white;
     grid-template-columns: 1fr;
   }
 }
+.experience-result-columns > div:last-child {
+  margin-top: 0;
+}
