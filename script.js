@@ -1373,7 +1373,9 @@ function updateStayRecommendation() {
   });
 
   if (selectedSize === "2" && selectedLocation === "vineyard") {
-    recommendation = "⭐ Recommended: North Lodge — perfect for couples staying on the vineyard.";
+    recommendation = "⭐ We think you'll love North Lodge
+
+A romantic vineyard stay for two, perfect for turning your visit into a weekend away.";
 
     document
       .getElementById("north-lodge")
