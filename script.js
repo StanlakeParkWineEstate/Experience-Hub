@@ -1402,3 +1402,12 @@ function updateStayRecommendation() {
 
   stayResult.innerHTML = recommendation;
 }
+const tourAccordion = document.querySelector(".tour-mobile-accordion");
+const tourAccordionButton = document.querySelector(".tour-accordion-button");
+
+if (tourAccordion && tourAccordionButton) {
+  tourAccordionButton.addEventListener("click", () => {
+    const isOpen = tourAccordion.classList.toggle("is-open");
+    tourAccordionButton.setAttribute("aria-expanded", isOpen);
+  });
+}
