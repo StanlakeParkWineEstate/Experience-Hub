@@ -291,14 +291,19 @@ function renderResults() {
     `;
   }).join("");
 }
-document.querySelector(".menu-button").addEventListener("click", () => {
-  const nav = document.querySelector(".nav");
-  const button = document.querySelector(".menu-button");
-  const isOpen = nav.classList.toggle("open");
-  button.setAttribute("aria-expanded", String(isOpen));
-});
+const menuButton = document.querySelector(".menu-button");
 
-document.querySelectorAll(".nav a").forEach(link => {
+if (menuButton) {
+  menuButton.addEventListener("click", () => {
+    const nav = document.querySelector(".nav");
+    const isOpen = nav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+const navLinksMenu = document.querySelectorAll(".nav a");
+
+navLinksMenu.forEach(link => {
   link.addEventListener("click", () => {
     document.querySelector(".nav").classList.remove("open");
     document.querySelector(".menu-button").setAttribute("aria-expanded", "false");
