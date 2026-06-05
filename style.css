@@ -2469,3 +2469,58 @@ color:white;
   }
 
 }
+@media (max-width: 768px) {
+  .tour-mobile-accordion {
+    padding: 0;
+    background: transparent;
+  }
+
+  .tour-mobile-accordion .tour-details {
+    background: #2f6f49;
+    border-radius: 24px;
+    padding: 20px;
+    color: #fff;
+  }
+
+  .tour-mobile-accordion summary {
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .tour-mobile-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .tour-mobile-accordion summary span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .tour-mobile-accordion summary strong {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 1.1rem;
+    line-height: 1.25;
+  }
+
+  .tour-mobile-accordion summary strong::after {
+    content: "+";
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+
+  .tour-mobile-accordion details[open] summary strong::after {
+    content: "–";
+  }
+
+  .tour-mobile-accordion details[open] summary {
+    margin-bottom: 24px;
+  }
+}
