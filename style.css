@@ -2409,3 +2409,15 @@ color:white;
 .tour-inspiration-intro h3 {
   margin-bottom: 12px;
 }
+@media (max-width: 768px) {
+  .quick-actions {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 8px;
+  }
+
+  .quick-actions .action-card {
+    min-width: 240px;
+  }
+}
