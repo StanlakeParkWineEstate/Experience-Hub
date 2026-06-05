@@ -2529,17 +2529,11 @@ color:white;
 
 /* DESKTOP: show content normally, no accordion */
 @media (min-width: 769px) {
-
-  .tour-details {
-    display: block;
-  }
-
   .tour-details summary {
     display: none;
   }
 
-  .tour-details:not([open]) > *:not(summary) {
+  .tour-details > *:not(summary) {
     display: block !important;
   }
-
 }
