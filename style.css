@@ -2469,7 +2469,9 @@ color:white;
   }
 
 }
+/* MOBILE: accordion */
 @media (max-width: 768px) {
+
   .tour-mobile-accordion {
     padding: 0;
     background: transparent;
@@ -2523,4 +2525,21 @@ color:white;
   .tour-mobile-accordion details[open] summary {
     margin-bottom: 24px;
   }
+}
+
+/* DESKTOP: show content normally, no accordion */
+@media (min-width: 769px) {
+
+  .tour-details {
+    display: block;
+  }
+
+  .tour-details summary {
+    display: none;
+  }
+
+  .tour-details:not([open]) > *:not(summary) {
+    display: block !important;
+  }
+
 }
