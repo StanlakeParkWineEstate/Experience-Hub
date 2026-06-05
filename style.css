@@ -2421,3 +2421,33 @@ color:white;
     min-width: 240px;
   }
 }
+@media (max-width: 768px) {
+  .hero-media,
+  .hero-actions,
+  .hero-steps {
+    display: none !important;
+  }
+
+  .hero {
+    padding: 28px 22px 18px;
+    margin-bottom: 18px;
+  }
+
+  .hero-content {
+    padding: 0;
+    text-align: left;
+  }
+
+  .hero-content .eyebrow {
+    margin-bottom: 0;
+  }
+
+  .hero h1,
+  .hero-content > p:not(.eyebrow) {
+    display: none;
+  }
+
+  .quick-actions {
+    margin-top: 0;
+  }
+}
