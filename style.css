@@ -2469,31 +2469,35 @@ color:white;
   }
 
 }
-/* MOBILE: accordion */
-@media (max-width: 768px) {
+/* Desktop */
+.tour-accordion-button {
+  display: none;
+}
 
+.tour-accordion-content {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
   .tour-mobile-accordion {
     padding: 0;
     background: transparent;
   }
 
-  .tour-mobile-accordion .tour-details {
-    background: #2f6f49;
-    border-radius: 24px;
+  .tour-accordion-button {
+    display: block;
+    width: 100%;
     padding: 20px;
+    border: 0;
+    border-radius: 24px;
+    background: #2f6f49;
     color: #fff;
-  }
-
-  .tour-mobile-accordion summary {
+    text-align: left;
     cursor: pointer;
-    list-style: none;
   }
 
-  .tour-mobile-accordion summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .tour-mobile-accordion summary span {
+  .tour-accordion-button span {
     display: block;
     margin-bottom: 6px;
     font-size: 0.75rem;
@@ -2503,7 +2507,7 @@ color:white;
     opacity: 0.8;
   }
 
-  .tour-mobile-accordion summary strong {
+  .tour-accordion-button strong {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2512,28 +2516,25 @@ color:white;
     line-height: 1.25;
   }
 
-  .tour-mobile-accordion summary strong::after {
+  .tour-accordion-button strong::after {
     content: "+";
     font-size: 1.5rem;
-    line-height: 1;
   }
 
-  .tour-mobile-accordion details[open] summary strong::after {
+  .tour-mobile-accordion.is-open .tour-accordion-button strong::after {
     content: "–";
   }
 
-  .tour-mobile-accordion details[open] summary {
-    margin-bottom: 24px;
-  }
-}
-
-/* DESKTOP: show content normally, no accordion */
-@media (min-width: 769px) {
-  .tour-details summary {
+  .tour-accordion-content {
     display: none;
+    margin-top: 18px;
+    background: #2f6f49;
+    border-radius: 24px;
+    padding: 20px;
+    color: #fff;
   }
 
-  .tour-details > *:not(summary) {
-    display: block !important;
+  .tour-mobile-accordion.is-open .tour-accordion-content {
+    display: block;
   }
 }
