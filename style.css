@@ -2422,32 +2422,26 @@ color:white;
   }
 }
 @media (max-width: 768px) {
-  .hero-media,
+
+  .hero h1,
   .hero-actions,
-  .hero-steps {
+  .hero-steps,
+  .hero-media {
     display: none !important;
   }
 
   .hero {
-    padding: 28px 22px 18px;
-    margin-bottom: 18px;
+    padding: 24px;
+    min-height: auto;
   }
 
   .hero-content {
-    padding: 0;
-    text-align: left;
+    gap: 12px;
   }
 
-  .hero-content .eyebrow {
+  .hero-content p:not(.eyebrow) {
     margin-bottom: 0;
-  }
-
-  .hero h1,
-  .hero-content > p:not(.eyebrow) {
-    display: none;
-  }
-
-  .quick-actions {
-    margin-top: 0;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
