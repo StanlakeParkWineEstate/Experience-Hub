@@ -2445,3 +2445,27 @@ color:white;
     line-height: 1.6;
   }
 }
+@media (max-width: 768px) {
+
+  .section-intro {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-intro p {
+    font-size: 1rem;
+  }
+
+}
+@media (max-width: 768px) {
+
+  section h2 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+  }
+
+}
