@@ -49,14 +49,6 @@ font-family: "Google Sans", sans-serif;  background: #ffffff;
   line-height: 1.5;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background: #ffffff;
-}
-
 .app-shell {
   width: min(1480px, 100%);
   margin: 0 auto;
@@ -1566,7 +1558,6 @@ color:white;
   font-size: 0.95rem;
   font-weight: 700;
   opacity: 0.9;
-}
 }
 .sticky-tour-button{
   position:fixed;
