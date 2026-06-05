@@ -2394,3 +2394,18 @@ color:white;
 .footer-grid a {
   color: white;
 }
+.tour-proof {
+  margin-top: 20px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.tour-inspiration-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 60px auto 40px;
+}
+
+.tour-inspiration-intro h3 {
+  margin-bottom: 12px;
+}
