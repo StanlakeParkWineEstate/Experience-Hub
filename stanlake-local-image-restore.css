@@ -1,0 +1,44 @@
+/* Local image restore for GitHub Pages.
+   Uses image files in the same root folder as index.html/style.css. */
+.hero-media {
+  background: linear-gradient(135deg, rgba(32,25,22,0.25), rgba(32,25,22,0.45)), url("wine-tour.jpg") center/cover no-repeat !important;
+}
+.action-card.wine {
+  background: linear-gradient(rgba(32,25,22,0.18), rgba(32,25,22,0.62)), url("stanlake-park-wine-guide-pinot-noir-rose.jpg") center/cover no-repeat !important;
+}
+.action-card.visit {
+  background: linear-gradient(rgba(32,25,22,0.18), rgba(32,25,22,0.62)), url("wine-tour.jpg") center/cover no-repeat !important;
+}
+.action-card.estate {
+  background: linear-gradient(rgba(32,25,22,0.18), rgba(32,25,22,0.62)), url("historic-stanlake.jpg") center/cover no-repeat !important;
+}
+.action-card.nearby {
+  background: linear-gradient(rgba(32,25,22,0.18), rgba(32,25,22,0.62)), url("stanlake-park-wine-tours-march-2026-6.jpg") center/cover no-repeat !important;
+}
+.stay-card.north {
+  background: linear-gradient(rgba(32,25,22,0.18), rgba(32,25,22,0.62)), url("north-lodge.jpg") center/cover no-repeat !important;
+}
+.stay-card.south {
+  background: linear-gradient(rgba(32,25,22,0.18), rgba(32,25,22,0.62)), url("south-lodge.jpg") center/cover no-repeat !important;
+}
+.stay-card.school {
+  background: linear-gradient(rgba(32,25,22,0.18), rgba(32,25,22,0.62)), url("old-school-house.jpg") center/cover no-repeat !important;
+}
+.journey-image.couple {
+  background: url("north-lodge.jpg") center/cover no-repeat !important;
+}
+.journey-image.group {
+  background: url("south-lodge.jpg") center/cover no-repeat !important;
+}
+.journey-image.london {
+  background: url("elizabeth-line.jpg") center/cover no-repeat !important;
+}
+.dark-section {
+  background: linear-gradient(135deg, rgba(32,25,22,0.82), rgba(63,93,55,0.82)), url("wine-tour.jpg") center/cover no-repeat !important;
+}
+.estate-card {
+  background: linear-gradient(135deg, rgba(32,25,22,0.88), rgba(63,93,55,0.74)), url("historic-stanlake.jpg") center/cover no-repeat !important;
+}
+.site-footer, .closing {
+  background: linear-gradient(135deg, rgba(32,25,22,0.88), rgba(63,93,55,0.76)), url("historic-stanlake.jpg") center/cover no-repeat !important;
+}
